@@ -13,7 +13,7 @@ namespace jodeware2
 		{
 			InitializeComponent();
 
-			MainPage = new jodeware2.MainPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()
