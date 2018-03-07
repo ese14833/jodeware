@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbl_username" Text="Benutzername"/>
+            <Entry x:Name="entry_username" Text="Benutzername"/>
+            <Label x:Name="lbl_password" Text="Passwort" />
+            <Entry x:Name="entry_password" Text="Passwort" IsPassword="True"/>
+
+            <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
