@@ -4,27 +4,4 @@
              xmlns:local="clr-namespace:jodeware2"
              x:Class="jodeware2.MainPage">
 
-    <ContentPage.Content>
-        <Grid Margin="16">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0">
-                <Label Text="Please enter your credentials" />
-                <Entry Text="{Binding Username}"
-                       Placeholder="Username" />
-                <Entry Text="{Binding Password}"
-                       Placeholder="Password"
-                       IsPassword="True" />
-                <Label Text="Invalid credentials entered" 
-                       IsVisible="{Binding AreCredentialsInvalid}" 
-                       TextColor="Red" />
-            </StackLayout>
-            <Button Grid.Row="2" Text="Authenticate" Command="{Binding AuthenticateCommand}" />
-        </Grid>
-    </ContentPage.Content>
-
-
 </ContentPage>
