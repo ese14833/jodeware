@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="20" Padding="80" VerticalOptions="Center" BackgroundColor="LightBlue">
             <Label x:Name="lbl_username" Text="Benutzername"/>
             <Entry x:Name="entry_username" Text="Benutzername"/>
             <Label x:Name="lbl_password" Text="Passwort" />
             <Entry x:Name="entry_password" Text="Passwort" IsPassword="True"/>
 
-            <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure"/>
+            <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure" BackgroundColor="WhiteSmoke" BorderColor="Black"/>
 
         </StackLayout>
     </ContentPage.Content>
