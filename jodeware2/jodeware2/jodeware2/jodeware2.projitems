@@ -19,8 +19,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\RestService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LocalDB\Hersteller.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerDB.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerListpage.xaml.cs">
-      <DependentUpon>HerstellerListpage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerListPage.xaml.cs">
+      <DependentUpon>HerstellerListPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)LocalDB\ILocalFileHelper.cs" />
@@ -42,7 +42,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerListpage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
