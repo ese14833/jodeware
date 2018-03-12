@@ -16,17 +16,17 @@ namespace jodeware2.LocalDB
             database.CreateTableAsync<Hersteller>().Wait();
         }
 
-        public Task<List<Hersteller>> GetLieferantsAsync()
+        public Task<List<Hersteller>> GetHerstellersAsync()
         {
             return database.Table<Hersteller>().ToListAsync();
         }
 
-        public Task<Hersteller> GetLieferantAsync(int id)
+        public Task<Hersteller> GetHerstellerAsync(int id)
         {
             return database.Table<Hersteller>().Where(i => i.HerID == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveLieferantAsync(Hersteller hersteller)
+        public Task<int> SaveHerstellerAsync(Hersteller hersteller)
         {
             if (hersteller.HerID == 0)
             {
@@ -37,7 +37,7 @@ namespace jodeware2.LocalDB
                 return database.InsertAsync(hersteller);
             }
         }
-        public Task<int> DeleteLieferantAsync(Hersteller hersteller)
+        public Task<int> DeleteHerstellerAsync(Hersteller hersteller)
         {
             return database.DeleteAsync(hersteller);
         }
