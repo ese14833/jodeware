@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace jodeware2.LocalDB
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HerstellerListpage : ContentPage
+	public partial class HerstellerListPage : ContentPage
 	{
-		public HerstellerListpage ()
+		public HerstellerListPage ()
 		{
 			InitializeComponent ();
 		}
