@@ -1,4 +1,5 @@
 ﻿using jodeware2.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -26,7 +27,32 @@ namespace jodeware2.Data
             postData.Add(new KeyValuePair<string, string>("username", user.username));
             postData.Add(new KeyValuePair<string, string>("password", user.password));
             var content = new FormUrlEncodedContent(postData);
+            var weburl = "www.test.com";
+            var response = await PostResponse<Token>(weburl, content);
+            DateTime dt = new DateTime();
+            dt = DateTime.Today;
+            response.expire_date = dt.AddSeconds(response.expire_in);
+            return response;
             
+        }
+
+        public async Task<T> PostResponseLogin<T>(string weburl, FormUrlEncodedContent content) where T : class
+        {
+            var response = await client.PostAsync(weburl, content);
+            var jsonResult = response.Content.ReadAsStringAsync().Result;
+            var responseObject = JsonConvert.DeserializeObject<T>(jsonResult);
+            return responseObject;
+        }
+
+        public async Task<T> PostResponse<T>(string weburl, string jsonstring) where T : class
+        {
+            //var Token = App.TokenDataBase.getToken();
+            string Contentype = "application/json";
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", //Token.access_token);
+            var Result = await client.PostAsync(weburl, new StringContent(jsonstring, Encoding.UTF8, Contentype));
+            var JsonResult = Result.Content.ReadAsStringAsync().Result;
+            var ContentResp = JsonConvert.DeserializeObject<T>(JsonResult);
+            return ContentResp;
         }
     }
 }
