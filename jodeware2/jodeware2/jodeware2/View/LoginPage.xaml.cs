@@ -23,7 +23,7 @@ namespace jodeware2.View
             User user = new User(entry_username.Text, entry_password.Text);
             if (user.CheckInformation())
             {
-                DisplayAlert("Login", "Login erfolgreich", "Okay!");
+                DisplayAlert("Login", "Login erfolgreich!", "Okay!");
             }
             else
             {
