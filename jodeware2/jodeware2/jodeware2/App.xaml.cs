@@ -15,7 +15,8 @@ namespace jodeware2
 			InitializeComponent();
 
 			MainPage = new LoginPage();
-		}
+            //MainPage = new HerstellerListPage();
+        }
 
 		protected override void OnStart ()
 		{

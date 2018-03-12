@@ -16,6 +16,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\Hersteller.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerListpage.xaml.cs">
+      <DependentUpon>HerstellerListpage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)LocalDB\ILocalFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -35,6 +41,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerListpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>
