@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.Bearbeiten" BackgroundColor="LightBlue">
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView  Orientation = "Vertical"/>
+            <ScrollView Orientation="Both"/>
             <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
         </StackLayout>
     </ContentPage.Content>
