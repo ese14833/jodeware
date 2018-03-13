@@ -1,4 +1,5 @@
-﻿using jodeware2.View;
+﻿using jodeware2.LocalDB;
+using jodeware2.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,8 @@ namespace jodeware2
 			InitializeComponent();
 
 			MainPage = new LoginPage();
-		}
+            //MainPage = new HerstellerListPage();
+        }
 
 		protected override void OnStart ()
 		{
