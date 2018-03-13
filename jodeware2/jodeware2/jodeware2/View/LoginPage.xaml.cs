@@ -18,16 +18,16 @@ namespace jodeware2.View
 			InitializeComponent ();
 		}
 
-        void SignInProcedure(object sender, EventArgs e)
+        async void SignInProcedure(object sender, EventArgs e)
         {
             User user = new User(entry_username.Text, entry_password.Text);
             if (user.CheckInformation())
             {
-                DisplayAlert("Login", "Login erfolgreich", "Okay!");
+                await Navigation.PushModalAsync(new HomeScreen());
             }
             else
             {
-                DisplayAlert("Login", "Login nicht erfolgreich!", "Okay!");
+                await DisplayAlert("Login", "Login nicht erfolgreich!", "Okay!");
             }
         }
         }

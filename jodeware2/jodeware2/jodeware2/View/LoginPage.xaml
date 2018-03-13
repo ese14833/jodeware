@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.LoginPage">
+             x:Class="jodeware2.View.LoginPage" BackgroundColor="LightBlue">
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="80" VerticalOptions="Center" BackgroundColor="LightBlue">
+        <StackLayout Spacing="10" Padding="50" VerticalOptions="Center">
             <Label x:Name="lbl_username" Text="Benutzername"/>
-            <Entry x:Name="entry_username" Text="Benutzername"/>
-            <Label x:Name="lbl_password" Text="Passwort" />
-            <Entry x:Name="entry_password" Text="Passwort" IsPassword="True"/>
-
+            <Entry x:Name="entry_username" Text=""/>
+            <Label x:Name="lbl_password" Text="Passwort"/>
+            <Entry x:Name="entry_password" Text="" IsPassword="True"/>
             <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure" BackgroundColor="WhiteSmoke" BorderColor="Black"/>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
