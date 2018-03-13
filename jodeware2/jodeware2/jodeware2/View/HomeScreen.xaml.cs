@@ -9,12 +9,17 @@ using Xamarin.Forms.Xaml;
 
 namespace jodeware2.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomeScreen : ContentPage
-	{
-		public HomeScreen ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomeScreen : ContentPage
+    {
+        public HomeScreen()
+        {
+            InitializeComponent();
+        }
+
+        async void AddBtn(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Bearbeiten());
+        }
+    }
 }

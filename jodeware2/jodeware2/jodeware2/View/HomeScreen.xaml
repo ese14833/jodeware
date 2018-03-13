@@ -4,17 +4,23 @@
              x:Class="jodeware2.View.HomeScreen" BackgroundColor="LightBlue">
     <ContentPage.Content>
         <StackLayout>
-            
+
+            <ScrollView  Orientation = "Vertical"/>
+
             <Label Text="Startseite"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
-            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" >
+            
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
                 
             <Button Text="Ware hinzufügen"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     HeightRequest="100"
                     FontSize="Medium"
+                    BackgroundColor="WhiteSmoke"
+                    BorderColor="Black"
+                    Clicked="AddBtn"
                     Margin="10"/>
 
             <Button Text="Waren bearbeiten"
@@ -22,16 +28,18 @@
                     HorizontalOptions="CenterAndExpand"
                     HeightRequest="100"
                     FontSize="Medium"
+                    BackgroundColor="WhiteSmoke"
+                    BorderColor="Black"
                     Margin="10"/>
 
             <Button Text="Berichte"
-                    
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     HeightRequest="100"
                     FontSize="Medium"
+                    BackgroundColor="WhiteSmoke"
+                    BorderColor="Black"
                     Margin="10"/>
-
             </StackLayout>
 
             <Label Text="JodeWare 2018"
