@@ -54,5 +54,12 @@ namespace jodeware2.Data
     //        var ContentResp = JsonConvert.DeserializeObject<T>(JsonResult);
     //        return ContentResp;
     //    }
+
+        //public async Task<T> GetResponse<T>(string weburl) where T : class
+        //{
+        //    var Token = App.TokenDatabase.GetToken();
+        //    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", //Token.access_token);
+        //    var response = await client.GetAsync(weburl);
+        //}
     }
 }
