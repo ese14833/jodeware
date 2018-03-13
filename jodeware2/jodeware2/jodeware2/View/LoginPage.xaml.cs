@@ -23,15 +23,12 @@ namespace jodeware2.View
             User user = new User(entry_username.Text, entry_password.Text);
             if (user.CheckInformation())
             {
-                DisplayAlert("Login", "Login erfolgreich", "Okay!");
+                await Navigation.PushModalAsync(new HomeScreen());
             }
             else
             {
                 await DisplayAlert("Login", "Login nicht erfolgreich!", "Okay!");
             }
         }
-        }
-
-
-
+    }
 }
