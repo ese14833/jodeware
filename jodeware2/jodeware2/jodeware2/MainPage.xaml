@@ -2,6 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:jodeware2"
-             x:Class="jodeware2.MainPage">
+             x:Class="jodeware2.MainPage" BackgroundColor="Gray">
+
+    <Label x:Name="ConnectivityTest"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand"
+           FontSize="Medium"/>
 
 </ContentPage>
