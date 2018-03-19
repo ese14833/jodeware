@@ -21,5 +21,9 @@ namespace jodeware2.View
         {
             await Navigation.PushModalAsync(new Bearbeiten());
         }
+        async void LogOut(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LoginPage());
+        }
     }
 }

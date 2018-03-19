@@ -40,6 +40,17 @@
                     BackgroundColor="WhiteSmoke"
                     BorderColor="Black"
                     Margin="10"/>
+
+
+            <Button Text="Abmelden"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="70"
+                    FontSize="Medium"
+                    BackgroundColor="WhiteSmoke"
+                    BorderColor="Black"
+                    Clicked="LogOut"
+                    Margin="10"/>
             </StackLayout>
 
             <Label Text="JodeWare 2018"
