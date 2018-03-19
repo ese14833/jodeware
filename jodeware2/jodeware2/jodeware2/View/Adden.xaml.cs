@@ -16,5 +16,10 @@ namespace jodeware2.View
 		{
 			InitializeComponent ();
 		}
+
+        async void hinzufuegen(Object sender, EventArgs e)
+        {
+            await DisplayAlert("Erfolgreich", "Produkt wurde geaddet", "Okay");
+        }
 	}
 }

@@ -5,10 +5,10 @@
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="50" VerticalOptions="Center">
             <Label x:Name="lbl_username" Text="Benutzername"/>
-            <Entry x:Name="entry_username" Placeholder="Benutzername" BackgroundColor="WhiteSmoke"/>
+            <Entry x:Name="entry_username" Placeholder="Benutzername" BackgroundColor="WhiteSmoke" Keyboard="Email"/>
             <Label x:Name="lbl_password" Text="Passwort"/>
             <Entry x:Name="entry_password" Placeholder="Passwort" BackgroundColor="WhiteSmoke" IsPassword="True"/>
-            <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure" BackgroundColor="WhiteSmoke" BorderColor="Black"/>
+            <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure" BackgroundColor="WhiteSmoke" BorderRadius="10" BorderColor="Black"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,7 +19,7 @@
                     HeightRequest="100"
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
-                    BorderColor="Black"
+                    BorderRadius="10"
                     Clicked="AddBtn"
                     Margin="10"/>
 
@@ -29,7 +29,7 @@
                     HeightRequest="100"
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
-                    BorderColor="Black"
+                    BorderRadius="10"
                     Clicked="EditBtn"
                     Margin="10"/>
 
@@ -39,7 +39,7 @@
                     HeightRequest="100"
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
-                    BorderColor="Black"
+                    BorderRadius="10"
                     Margin="10"/>
 
 
@@ -48,8 +48,9 @@
                     HorizontalOptions="CenterAndExpand"
                     HeightRequest="70"
                     FontSize="Medium"
-                    BackgroundColor="WhiteSmoke"
-                    BorderColor="Black"
+                    TextColor="White"
+                    BackgroundColor="DarkBlue"
+                    BorderRadius="2"
                     Clicked="LogOut"
                     Margin="10"/>
             </StackLayout>
