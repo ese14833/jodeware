@@ -17,10 +17,10 @@ namespace jodeware2.View
             InitializeComponent();
         }
 
-        //async void AddBtn(object sender, EventArgs e)
-        //{
-        //  await Navigation.PushModalAsync(new Bearbeiten());
-        //}
+        async void AddBtn(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Adden());
+        }
 
         async void EditBtn(object sender, EventArgs e)
         {

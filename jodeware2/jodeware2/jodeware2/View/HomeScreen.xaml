@@ -20,6 +20,7 @@
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
                     BorderColor="Black"
+                    Clicked="AddBtn"
                     Margin="10"/>
 
             <Button Text="Waren bearbeiten"

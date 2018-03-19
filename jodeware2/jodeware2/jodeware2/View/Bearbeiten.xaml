@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView Orientation="Both"/>
-            <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
+            <SearchBar x:Name="suche" Placeholder="Suche nach Produkten" VerticalOptions="Center" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
