@@ -15,7 +15,7 @@ namespace jodeware2
 		{
 			InitializeComponent();
 
-			MainPage = new LoginPage();
+			MainPage = new MainPage();
             //MainPage = new HerstellerListPage();
         }
 

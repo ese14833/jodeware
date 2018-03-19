@@ -19,10 +19,14 @@ namespace jodeware2.Models
 
         public bool CheckInformation()
         {
-            if (!this.username.Equals("") && !this.password.Equals(""))
+            if (username.Length != 0 && password.Length != 0)
+            {
                 return true;
+            }
             else
+            { 
                 return false;
+            }
         }
 
 
