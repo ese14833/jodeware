@@ -19,7 +19,7 @@ namespace jodeware2.Models
 
         public bool CheckInformation()
         {
-            if (username != null && password != null)
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
                 return true;
             }
