@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <ScrollView  Orientation = "Vertical"/>
+            <ScrollView  Orientation = "Both"/>
 
             <Label Text="Startseite"
                    VerticalOptions="Center"

@@ -7,7 +7,7 @@
 
         <StackLayout Spacing="10" Padding="50" VerticalOptions="Center">
 
-            <Image Source = "512x256_jodeware.png"/>
+            <Image Source = "jodewarelogo.png"/>
 
             <Label x:Name="lbl_username" Text="Benutzername"/>
             <Entry x:Name="entry_username" Placeholder="Benutzername" BackgroundColor="WhiteSmoke" Keyboard="Email"/>

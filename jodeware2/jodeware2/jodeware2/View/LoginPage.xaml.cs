@@ -16,7 +16,7 @@ namespace jodeware2.View
 		public LoginPage ()
 		{
 			InitializeComponent ();
-            var image = new Image { Source = "512x256_jodeware.png" };
+            var image = new Image { Source = "jodewarelogo.png" };
 		}
 
         async void SignInProcedure(object sender, EventArgs e)

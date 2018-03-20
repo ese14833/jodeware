@@ -89,7 +89,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\512x256_jodeware.png" />
+    <AndroidResource Include="Resources\drawable\jodewarelogo.png" />
   </ItemGroup>
   <Import Project="..\jodeware2\jodeware2.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
