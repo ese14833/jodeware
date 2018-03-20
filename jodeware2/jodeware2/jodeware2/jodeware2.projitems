@@ -67,4 +67,7 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)512x256_jodeware.png" />
+  </ItemGroup>
 </Project>

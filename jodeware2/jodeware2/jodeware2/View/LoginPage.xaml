@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.LoginPage" BackgroundColor="LightBlue">
     <ContentPage.Content>
+
+
         <StackLayout Spacing="10" Padding="50" VerticalOptions="Center">
+
+            <Image Source = "512x256_jodeware.png"/>
+
             <Label x:Name="lbl_username" Text="Benutzername"/>
             <Entry x:Name="entry_username" Placeholder="Benutzername" BackgroundColor="WhiteSmoke" Keyboard="Email"/>
             <Label x:Name="lbl_password" Text="Passwort"/>
