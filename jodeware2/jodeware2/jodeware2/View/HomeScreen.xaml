@@ -11,6 +11,7 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
             
+
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
                 
             <Button Text="Ware hinzufügen"
