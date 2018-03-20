@@ -20,6 +20,7 @@ namespace jodeware2.View
         async void hinzufuegen(Object sender, EventArgs e)
         {
             await DisplayAlert("Erfolgreich", "Produkt wurde geaddet", "Okay");
+            await Navigation.PushModalAsync(new HomeScreen());
         }
 	}
 }
