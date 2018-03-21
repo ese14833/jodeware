@@ -30,6 +30,10 @@
       <DependentUpon>Adden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Bericht.xaml.cs">
+      <DependentUpon>Bericht.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\HomeScreen.xaml.cs">
       <DependentUpon>HomeScreen.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -68,6 +72,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)adden.png" />
+    <Content Include="$(MSBuildThisFileDirectory)edit.png" />
     <Content Include="$(MSBuildThisFileDirectory)jodewarelogo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)statistic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Bericht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

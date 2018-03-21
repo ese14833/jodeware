@@ -1,66 +1,72 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.HomeScreen" BackgroundColor="LightBlue">
+             x:Class="jodeware2.View.HomeScreen" BackgroundColor="LightBlue" Title="Startseite - JodeWare">
     <ContentPage.Content>
 
-        <StackLayout>
+        <ScrollView x:Name="scroll" Orientation="Vertical">
 
-            <ScrollView  Orientation = "Both"/>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
             <Label Text="Startseite"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
-            
 
-            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
-                
-            <Button Text="Ware hinzufügen"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    HeightRequest="100"
+
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Padding="50" Spacing="20">
+                    
+
+                    <Button Text="Ware hinzufügen"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Image="adden.png"
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
                     BorderRadius="10"
                     Clicked="AddBtn"
                     Margin="10"/>
+                        
 
-            <Button Text="Waren bearbeiten"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    HeightRequest="100"
+                    <Button Text="Waren bearbeiten"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Image="edit.png"
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
                     BorderRadius="10"
                     Clicked="EditBtn"
                     Margin="10"/>
+                        
 
-            <Button Text="Berichte"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    HeightRequest="100"
+                    <Button Text="Berichte"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Image="statistic.png"
                     FontSize="Medium"
                     BackgroundColor="WhiteSmoke"
+                    Clicked="BerichtBtn"
                     BorderRadius="10"
                     Margin="10"/>
 
 
-            <Button Text="Abmelden"
+                    <Button Text="Abmelden"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    HeightRequest="70"
                     FontSize="Medium"
                     TextColor="White"
                     BackgroundColor="DarkBlue"
                     BorderRadius="2"
                     Clicked="LogOut"
                     Margin="10"/>
-            </StackLayout>
+                </StackLayout>
 
-            <Label Text="JodeWare 2018"
+                <Label Text="JodeWare 2018"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
 
         </StackLayout>
+
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>

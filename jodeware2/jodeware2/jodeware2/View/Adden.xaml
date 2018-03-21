@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.Adden" BackgroundColor="LightBlue">
+             x:Class="jodeware2.View.Adden" BackgroundColor="LightBlue" Title="Ware hinzufügen - JodeWare">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" Spacing="50" >
             <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
