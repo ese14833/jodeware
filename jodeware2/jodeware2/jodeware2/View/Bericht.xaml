@@ -4,9 +4,10 @@
              x:Class="jodeware2.View.Bericht">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView>
+                
+            </ListView>
+            <Button Text="Home" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
