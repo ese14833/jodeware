@@ -7,15 +7,19 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
+
 namespace jodeware2.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Bearbeiten : ContentPage
 	{
 		public Bearbeiten ()
 		{
-			InitializeComponent ();
-		}
+            InitializeComponent();
+            
+        }
 
         async void home_Clicked(object sender, EventArgs e)
         {

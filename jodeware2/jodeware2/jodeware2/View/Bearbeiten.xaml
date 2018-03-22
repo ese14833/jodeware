@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.Bearbeiten" BackgroundColor="LightBlue" Title="Ware bearbeiten - JodeWare">
     <ContentPage.Content>
+
         <StackLayout>
-            <ScrollView Orientation="Both"/>
+           
             <SearchBar x:Name="suche" Placeholder="Suche nach Produkten" VerticalOptions="Center" HorizontalOptions="Center"/>
+
             <Button x:Name="home" Text="Home" VerticalOptions="Center" HorizontalOptions="Center" Clicked="home_Clicked"/>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
