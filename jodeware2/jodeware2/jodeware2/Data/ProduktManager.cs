@@ -17,7 +17,7 @@ namespace jodeware2.Data
 
         public Task<List<Produkt>> GetTaskAsync()
         {
-            return restService.GetProduktsAsync();
+            return restService.RefreshDataAsync();
         }
 
         public Task SaveTaskAsync (Produkt produkt, bool isNewProdukt = false)

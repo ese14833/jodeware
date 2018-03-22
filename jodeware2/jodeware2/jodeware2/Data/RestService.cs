@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace jodeware2.Data
 {
-    public class RestService
+    public class RestService : IRestService
     {
         HttpClient client;
         //string grant_type = "password";
@@ -17,12 +18,15 @@ namespace jodeware2.Data
 
         public RestService()
         {
+            var authData = string.Format("{0}:{1}", Constants.Username, Constants.Password);
+            var authHeaderValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(authData));
+
             client = new HttpClient();
             client.MaxResponseContentBufferSize = 256000;
-            //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded' "));
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
         }
 
-        public async Task<List<Produkt>> GetProduktsAsync()
+        public async Task<List<Produkt>> RefreshDataAsync()
         {
             Produkts = new List<Produkt>();
 
