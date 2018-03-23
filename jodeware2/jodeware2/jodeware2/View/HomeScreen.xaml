@@ -4,9 +4,22 @@
              x:Class="jodeware2.View.HomeScreen" Title="Startseite - JodeWare">
     <ContentPage.Content>
 
+        
+        
+        
+        
         <ScrollView x:Name="scroll" Orientation="Vertical">
 
+
+
+
             <StackLayout>
+
+
+
+                <Image x:Name="logo" Source = "jodewarelogo.png"/>
+
+
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 

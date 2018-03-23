@@ -15,6 +15,11 @@ namespace jodeware2.View
         public HomeScreen()
         {
             InitializeComponent();
+
+
+            logo = new Image { Source = "jodewarelogo.png" };
+
+
             var imageSenderAdden = new Image { Source = "adden_colored.png" };
             imageSenderAdden.IsVisible = true;
 
