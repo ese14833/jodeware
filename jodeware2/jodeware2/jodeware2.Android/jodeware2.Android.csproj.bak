@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>jodeware2.Droid</RootNamespace>
     <AssemblyName>jodeware2.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -93,13 +93,16 @@
     <AndroidResource Include="Resources\drawable\jodewarelogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\statistic.png" />
+    <AndroidResource Include="Resources\drawable\edit_colored.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\adden.png" />
+    <AndroidResource Include="Resources\drawable\settings_colored.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\edit.png" />
+    <AndroidResource Include="Resources\drawable\statistic_colored.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\adden_colored.png" />
   </ItemGroup>
   <Import Project="..\jodeware2\jodeware2.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
