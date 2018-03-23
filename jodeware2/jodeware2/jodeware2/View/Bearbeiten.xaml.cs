@@ -1,4 +1,5 @@
-﻿using System;
+﻿using jodeware2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,8 @@ namespace jodeware2.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Bearbeiten : ContentPage
 	{
-		public Bearbeiten ()
+        bool isNewProdukt = false;
+        public Bearbeiten ()
 		{
             InitializeComponent();
             
@@ -24,6 +26,20 @@ namespace jodeware2.View
         async void home_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());
+        }
+
+        async void delete_Clicked(object sender, EventArgs e)
+        {
+            var produkt = (Produkt)BindingContext;
+            await App.produktManager.DeleteTaskAsync(produkt);
+            await Navigation.PopAsync();
+        }
+
+        async void save_Clicked(object sender, EventArgs e)
+        {
+            var todoItem = (Produkt)BindingContext;
+            await App.produktManager.SaveTaskAsync(todoItem, isNewProdukt);
+            await Navigation.PopAsync();
         }
     }
 }

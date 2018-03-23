@@ -25,8 +25,8 @@ namespace jodeware2.Models
         }
     }
 
-    public class Rootobject
-    {
-        public Produkt[] produkts { get; set; }
-    }
+    //public class Rootobject
+    //{
+    //    public Produkt[] produkts { get; set; }
+    //}
 }
