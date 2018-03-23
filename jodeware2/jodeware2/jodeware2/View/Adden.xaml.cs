@@ -28,5 +28,34 @@ namespace jodeware2.View
             await DisplayAlert("Erfolgreich", "Produkt wurde geaddet", "Okay");
             await Navigation.PushModalAsync(new HomeScreen());
         }
-	}
+
+        async void coloredadden(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "adden_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Adden());
+        }
+
+        async void coloredbericht(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "statistic_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Bericht());
+        }
+
+        async void colorededit(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "edit_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Bearbeiten());
+        }
+
+        async void coloredsettings(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "settings_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Bericht());
+        }
+
+    }
 }

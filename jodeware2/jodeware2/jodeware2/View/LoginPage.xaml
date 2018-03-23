@@ -7,9 +7,11 @@
     <ContentPage.Content>
 
 
-        <StackLayout Spacing="10" Padding="50" VerticalOptions="CenterAndExpand">
+        <StackLayout Spacing="10" Padding="50" VerticalOptions="Center">
 
-            <Image Source = "jodewarelogo.png"/>
+            <Image Source = "jodewarelogo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+
+            <Label x:Name="Anmelden_Text" HorizontalOptions="CenterAndExpand"  TextColor="White"/>
 
             <Label x:Name="lbl_username" Text="Benutzername"/>
             <Entry x:Name="entry_username" Placeholder="Benutzername" BackgroundColor="WhiteSmoke" Keyboard="Email"/>

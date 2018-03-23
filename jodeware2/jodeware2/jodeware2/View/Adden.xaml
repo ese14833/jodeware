@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.Adden" BackgroundColor="LightBlue" Title="Ware hinzufügen - JodeWare">
+             x:Class="jodeware2.View.Adden" Title="Ware hinzufügen - JodeWare">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" Spacing="50" >
+        <StackLayout HorizontalOptions="FillAndExpand" Spacing="50" >
             <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
             <Entry x:Name="e_bezeichnung" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
             <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
@@ -13,6 +13,41 @@
             <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
             <Entry x:Name="e_location" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>
             <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderRadius="10" Clicked="hinzufuegen"/>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Button Text="Ware hinzufügen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Button Text="Waren bearbeiten" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="edit_colored.png" Clicked="colorededit"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Button Text="Berichte" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="statistic_colored.png" Clicked="coloredbericht"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Button Text="Einstellungen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="settings_colored.png" Clicked="coloredsettings"/>
+                </StackLayout>
+
+
+
+            </StackLayout>
+
+
+
+
         </StackLayout>
+
+
+        
+
+
     </ContentPage.Content>
 </ContentPage>

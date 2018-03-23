@@ -17,6 +17,10 @@ namespace jodeware2.View
 		{
 			InitializeComponent ();
             var image = new Image { Source = "jodewarelogo.png" };
+
+            Anmelden_Text.FontSize = 24;
+            Anmelden_Text.Text = "Anmelden";
+            Anmelden_Text.FontAttributes = FontAttributes.Bold;
 		}
 
         async void SignInProcedure(object sender, EventArgs e)

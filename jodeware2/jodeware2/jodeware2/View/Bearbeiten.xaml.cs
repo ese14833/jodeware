@@ -20,6 +20,9 @@ namespace jodeware2.View
         public Bearbeiten ()
 		{
             InitializeComponent();
+
+            produktlist.ItemsSource = ProduktListeTest.StringListe;
+
             
         }
 
@@ -41,5 +44,35 @@ namespace jodeware2.View
             await App.produktManager.SaveTaskAsync(todoItem, isNewProdukt);
             await Navigation.PopAsync();
         }
+
+
+        async void coloredadden(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "adden_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Adden());
+        }
+
+        async void coloredbericht(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "statistic_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Bericht());
+        }
+
+        async void colorededit(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "edit_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Bearbeiten());
+        }
+
+        async void coloredsettings(object sender, EventArgs e)
+        {
+            var imageSender = new Image { Source = "settings_colored.png" };
+            imageSender.Aspect = Aspect.AspectFit;
+            await Navigation.PushModalAsync(new Bericht());
+        }
+
     }
 }
