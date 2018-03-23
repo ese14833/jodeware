@@ -15,6 +15,19 @@ namespace jodeware2.View
         public HomeScreen()
         {
             InitializeComponent();
+            var imageSenderAdden = new Image { Source = "adden_colored.png" };
+            imageSenderAdden.IsVisible = true;
+
+            var imageSenderEdit = new Image { Source = "edit_colored.png" };
+            imageSenderEdit.IsVisible = true;
+
+            var imageSenderStatistic = new Image { Source = "statistic_colored.png" };
+            imageSenderStatistic.IsVisible = true;
+
+
+            var imageSenderSettings = new Image { Source = "settings_colored.png" };
+            imageSenderSettings.IsVisible = true;
+
             ScrollView scroll = new ScrollView();
         }
 
@@ -26,36 +39,23 @@ namespace jodeware2.View
 
         async void coloredadden(object sender, EventArgs e)
         {
-            var imageSender = new Image { Source = "adden_colored.png" };
-            imageSender.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(new Adden());
         }
 
         async void coloredbericht(object sender, EventArgs e)
         {
-            var imageSender = new Image { Source = "statistic_colored.png" };
-            imageSender.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(new Bericht());
         }
 
         async void colorededit(object sender, EventArgs e)
         {
-            var imageSender = new Image { Source = "edit_colored.png" };
-            imageSender.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(new Bearbeiten());
         }
 
         async void coloredsettings(object sender, EventArgs e)
         {
-            var imageSender = new Image { Source = "settings_colored.png" };
-            imageSender.Aspect = Aspect.AspectFit;
+
             await Navigation.PushModalAsync(new Bericht());
         }
-
-
-
-
-
-
     }
 }
