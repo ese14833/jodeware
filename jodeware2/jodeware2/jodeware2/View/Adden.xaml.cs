@@ -18,6 +18,7 @@ namespace jodeware2.View
 		public Adden ()
 		{
 			InitializeComponent ();
+            Title = "Ware hinzufügen";
             isNewProdukt = true;
 		}
 

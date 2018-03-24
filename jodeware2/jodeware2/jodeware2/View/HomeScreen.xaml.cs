@@ -17,6 +17,7 @@ namespace jodeware2.View
         {
             InitializeComponent();
 
+            Title = "Startseite";
 
             logo = new Image { Source = "jodewarelogo.png" };
 

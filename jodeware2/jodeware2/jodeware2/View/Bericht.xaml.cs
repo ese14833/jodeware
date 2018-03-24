@@ -15,6 +15,7 @@ namespace jodeware2.View
         public Bericht()
         {
             InitializeComponent();
+            Title = "Berichte";
         }
 
         async void Button_Clicked(Object sender, EventArgs e)

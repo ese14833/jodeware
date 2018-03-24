@@ -17,6 +17,9 @@ namespace jodeware2.View
 		public LoginPage ()
 		{
 			InitializeComponent ();
+
+            Title = "Anmelden";
+
             var image = new Image { Source = "jodewarelogo.png" };
 
             Anmelden_Text.FontSize = 24;

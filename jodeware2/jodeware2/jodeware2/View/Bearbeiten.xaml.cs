@@ -20,7 +20,7 @@ namespace jodeware2.View
         public Bearbeiten ()
 		{
             InitializeComponent();
-
+            Title = "Ware bearbeiten";
             produktlist.ItemsSource = ProduktListeTest.StringListe;
 
             
