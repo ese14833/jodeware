@@ -81,7 +81,9 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)adden_colored.png" />
     <Content Include="$(MSBuildThisFileDirectory)edit_colored.png" />
-    <Content Include="$(MSBuildThisFileDirectory)jodewarelogo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)jodewarelogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)settings_colored.png" />
     <Content Include="$(MSBuildThisFileDirectory)statistic_colored.png" />
   </ItemGroup>

@@ -24,12 +24,14 @@ namespace jodeware2.View
             Anmelden_Text.FontAttributes = FontAttributes.Bold;
 		}
 
+        #pragma warning disable 1998
         async void SignInProcedure(object sender, EventArgs e)
         {
             Login(entry_username.Text, entry_password.Text);
         }
+        #pragma warning restore 1998
 
-            public void Login(string username, string password)
+        public void Login(string username, string password)
         {
             var client = new RestClient("https://jodeware.eu.auth0.com/oauth/token");
             var request = new RestRequest(Method.POST);
