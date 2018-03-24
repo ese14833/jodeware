@@ -21,20 +21,20 @@ namespace jodeware2.Services
 
         public bool DoesProduktExist(int id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
+            //if (id == null)
+            //{
+            //    throw new ArgumentNullException("id");
+            //}
 
             return _repository.DoesProduktExist(id);
         }
 
         public Produkt Find(int id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
+            //if (id == null)
+            //{
+            //    throw new ArgumentNullException("id");
+            //}
 
             return _repository.Find(id);
         }
@@ -66,10 +66,10 @@ namespace jodeware2.Services
 
         public void DeleteData(int id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException("produkt");
-            }
+            //if (id == null)
+            //{
+            //    throw new ArgumentNullException("produkt");
+            //}
 
             _repository.Delete(id);
         }

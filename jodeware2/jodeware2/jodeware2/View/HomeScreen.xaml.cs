@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,9 +37,17 @@ namespace jodeware2.View
             ScrollView scroll = new ScrollView();
         }
 
-        async void LogOut(object sender, EventArgs e)
+        async void LogOut_Clicked(object sender, EventArgs e)
         {
+            Logout();
             await Navigation.PushModalAsync(new LoginPage());
+        }
+
+        public void Logout()
+        {
+            var client = new RestClient("https://jodeware.eu.auth0.com/v2/logout");
+            var request = new RestRequest(Method.GET);
+            var response = client.Execute(request);
         }
 
 
