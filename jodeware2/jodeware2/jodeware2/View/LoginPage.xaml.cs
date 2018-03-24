@@ -26,28 +26,21 @@ namespace jodeware2.View
 
         async void SignInProcedure(object sender, EventArgs e)
         {
-            User user = new User(entry_username.Text, entry_password.Text);
-            if (user.CheckInformation())
-            {
-                await Navigation.PushModalAsync(new HomeScreen());
-            }
-            else
-            {
-                await DisplayAlert("Login", "Login nicht erfolgreich!", "Okay!");
-            }
-            //Login(entry_username.Text, entry_password.Text);
+            Login(entry_username.Text, entry_password.Text);
         }
 
             public void Login(string username, string password)
         {
             var client = new RestClient("https://jodeware.eu.auth0.com/oauth/token");
             var request = new RestRequest(Method.POST);
-            request.AddParameter("client_id", "2qK8aSMyOtzidVPXJHSMf1Aj5Ml-V9zB");
+
+            request.AddParameter("grant_type", "password");
             request.AddParameter("username", "johannesjanka@aol.com");
             request.AddParameter("password", "Jodeware123");
-            request.AddParameter("connection", "Username-Password-Authentication");
-            request.AddParameter("grant_type", "password");
+            request.AddParameter("client_id", "2qK8aSMyOtzidVPXJHSMf1Aj5Ml-V9zB");
+            request.AddParameter("client_secret", "QNYxADHBbfi91QBQs3hc6DzEJ0-n4XzJ63eGqA--GZVapyhWPBMEjD1zhil_RMsP");
             request.AddParameter("scope", "openid");
+
 
             IRestResponse response = client.Execute(request);
 
@@ -74,10 +67,10 @@ namespace jodeware2.View
 
             IRestResponse response = client.Execute(request);
 
-            //User user = JsonConvert.DeserializeObject<User>(response.Content);
+            User user = JsonConvert.DeserializeObject<User>(response.Content);
 
-            //Application.Current.Properties["email"] = user.email;
-            //Application.Current.Properties["picture"] = user.picture;
+            Application.Current.Properties["email"] = user.email;
+            Application.Current.Properties["picture"] = user.picture;
 
             Navigation.PushModalAsync(new HomeScreen());
         }
@@ -89,13 +82,13 @@ namespace jodeware2.View
             public string token_type { get; set; }
         }
 
-        //public class User
-        //{
-        //    public string name { get; set; }
-        //    public string picture { get; set; }
-        //    public string email { get; set; }
-        //}
-       
+        public class User
+        {
+            public string name { get; set; }
+            public string picture { get; set; }
+            public string email { get; set; }
+        }
+
     }
     
 }
