@@ -40,8 +40,8 @@ namespace jodeware2.View
 
         async void save_Clicked(object sender, EventArgs e)
         {
-            var todoItem = (Produkt)BindingContext;
-            await App.produktManager.SaveTaskAsync(todoItem, isNewProdukt);
+            var produkt = (Produkt)BindingContext;
+            await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
             await Navigation.PopAsync();
         }
 
