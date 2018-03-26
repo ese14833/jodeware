@@ -10,13 +10,13 @@
 
             <StackLayout Margin="20" Padding="10">
             <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
-            <Entry x:Name="e_bezeichnung" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="e_bezeichnung" Text="{Binding Path=pro_bezeichnung}" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
             <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
-            <Entry x:Name="e_kategorie" Placeholder="Kategorie" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="e_kategorie" Text="{Binding Path=kategorie_kat_id}" Placeholder="Kategorie" BackgroundColor="WhiteSmoke"/>
             <Label x:Name="l_menge" Text="Menge" Font="Calibri"/>
-            <Entry x:Name="e_menge" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+                <Entry x:Name="e_menge" Text="{Binding Path=pro_id}" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
             <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
-            <Entry x:Name="e_location" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="e_location" Text="{Binding Path=pro_beschreibung}" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>
             <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" Clicked="hinzufuegen"/>
 
         </StackLayout>
