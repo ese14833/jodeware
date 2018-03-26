@@ -70,6 +70,23 @@
                     </StackLayout>
 
                 </StackLayout>
+
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                        <Button BorderRadius="3" Image="qrcode.png" Clicked="colorededit" HeightRequest="100"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Button Text="QR - Code" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredqr" HeightRequest="100"/>
+                    </StackLayout>
+
+  
+                </StackLayout>
+
+
                 <Button Text="Logout" Clicked="LogOut_Clicked"/>
             </StackLayout>
         </ScrollView>

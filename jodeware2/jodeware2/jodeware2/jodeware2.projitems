@@ -41,6 +41,10 @@
       <DependentUpon>Bericht.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Einstellungen.xaml.cs">
+      <DependentUpon>Einstellungen.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\HomeScreen.xaml.cs">
       <DependentUpon>HomeScreen.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -51,6 +55,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Bearbeiten.xaml.cs">
       <DependentUpon>Bearbeiten.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml.cs">
+      <DependentUpon>QRCodeGenerator.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -84,6 +92,7 @@
     <Content Include="$(MSBuildThisFileDirectory)jodewarelogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)qrcode.png" />
     <Content Include="$(MSBuildThisFileDirectory)settings_colored.png" />
     <Content Include="$(MSBuildThisFileDirectory)statistic_colored.png" />
   </ItemGroup>
@@ -95,5 +104,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Einstellungen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

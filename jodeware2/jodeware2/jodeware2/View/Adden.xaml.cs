@@ -15,12 +15,13 @@ namespace jodeware2.View
 	{
         bool isNewProdukt;
 
+
 		public Adden ()
 		{
 			InitializeComponent ();
             Title = "Ware hinzufügen";
             isNewProdukt = true;
-		}
+        }
 
         async void hinzufuegen(Object sender, EventArgs e)
         {
@@ -57,6 +58,5 @@ namespace jodeware2.View
             imageSender.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(new Bericht());
         }
-
     }
 }

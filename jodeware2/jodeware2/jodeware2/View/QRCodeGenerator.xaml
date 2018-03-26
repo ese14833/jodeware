@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             x:Class="jodeware2.View.QRCodeGenerator">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+
+
+
+            <!-- BarcodeValue muss mit den Usernamen(=user) verbunden werden. Bsp.: www.jodeware.com/+user -->
+
+            <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE"
+                                         BarcodeValue="www.spengergasse.at" />
+
+            <!-- Zusätzlich wird noch die Druck-Funktion und lokal speichern-Funktion kommen  -->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
