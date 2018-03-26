@@ -30,7 +30,7 @@ namespace jodeware2.Data
         {
             Produkts = new List<Produkt>();
 
-            var uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            var uri = new Uri(string.Format(Constants.RestRead, string.Empty));
 
             try
             {
@@ -49,7 +49,7 @@ namespace jodeware2.Data
 
         public async Task SaveProduktAsync(Produkt produkt, bool isNewProdukt = false)
         {
-            var uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            var uri = new Uri(string.Format(Constants.RestInsert, string.Empty));
 
             try
             {
@@ -78,7 +78,7 @@ namespace jodeware2.Data
 
         public async Task DeleteProduktAsync(int id)
         {
-            var uri = new Uri(string.Format(Constants.RestUrl, id));
+            var uri = new Uri(string.Format(Constants.RestDelete, id));
             try
             {
                 var response = await client.DeleteAsync(uri);

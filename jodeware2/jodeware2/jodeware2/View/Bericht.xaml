@@ -4,8 +4,19 @@
              x:Class="jodeware2.View.Bericht">
     <ContentPage.Content>
         <StackLayout>
-            <ListView>
-                
+            <ListView x:Name="lstView" RowHeight="60">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Produkt.pro_id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Image Source="adden_colored.png" HorizontalOptions="End" IsVisible="{Binding Produkt.pro_bild}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
             <Button Text="Home" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
 
