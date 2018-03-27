@@ -6,9 +6,6 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-
-
-
             <!-- BarcodeValue muss mit den Usernamen(=user) verbunden werden. Bsp.: www.jodeware.com/+user -->
 
             <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE"
@@ -16,6 +13,12 @@
 
             <!-- Zusätzlich wird noch die Druck-Funktion und lokal speichern-Funktion kommen  -->
 
+            <StackLayout>
+
+                <Button x:Name="home" Text="Home" VerticalOptions="Center" Clicked="Btn_home"/>
+
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

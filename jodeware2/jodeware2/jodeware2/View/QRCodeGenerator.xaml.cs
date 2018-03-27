@@ -28,5 +28,11 @@ namespace jodeware2.View
             barcode.BarcodeOptions.Width = 250;
             barcode.BarcodeOptions.Height = 250;
 		}
-	}
+
+        async void Btn_home(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new HomeScreen());
+        }
+
+    }
 }
