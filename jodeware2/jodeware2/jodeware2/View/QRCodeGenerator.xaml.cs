@@ -28,7 +28,8 @@ namespace jodeware2.View
 
             barcode.BarcodeOptions.Width = 350;
             barcode.BarcodeOptions.Height = 350;
-		}
+            
+        }
 
         async void Btn_home(object sender, EventArgs e)
         {
