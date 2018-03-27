@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Share;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,11 @@ namespace jodeware2.View
         async void Btn_home(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());
+        }
+
+        private void Btn_sharelink(object sender, EventArgs e)
+        {
+            CrossShare.Current.OpenBrowser("http://www.jodeware.com");
         }
 
     }

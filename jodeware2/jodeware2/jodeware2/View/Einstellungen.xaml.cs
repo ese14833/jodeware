@@ -17,7 +17,7 @@ namespace jodeware2.View
 			InitializeComponent ();
 		}
 
-        async void Btn_bgchanger(object sender, EventArgs e)
+        public void Btn_bgchanger(object sender, EventArgs e)
         {
             Adden add = new Adden();
             add.BackgroundColor = Color.DarkGray;
@@ -30,6 +30,8 @@ namespace jodeware2.View
 
             HomeScreen start = new HomeScreen();
             start.BackgroundColor = Color.DarkGray;
+           
+
 
             this.BackgroundColor = Color.DarkGray;
 

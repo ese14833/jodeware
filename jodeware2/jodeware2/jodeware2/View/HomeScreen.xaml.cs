@@ -13,15 +13,19 @@ namespace jodeware2.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeScreen : ContentPage
     {
+
+
         public HomeScreen()
         {
             InitializeComponent();
 
+
             Title = "Startseite";
+
 
             logo = new Image { Source = "jodewarelogo.png" };
 
-
+            
             var imageSenderAdden = new Image { Source = "adden_colored.png" };
             imageSenderAdden.IsVisible = true;
 
@@ -36,6 +40,7 @@ namespace jodeware2.View
 
             var imageSenderQR = new Image { Source = "qrcode.png" };
             imageSenderSettings.IsVisible = true;
+
 
             ScrollView scroll = new ScrollView();
         }
