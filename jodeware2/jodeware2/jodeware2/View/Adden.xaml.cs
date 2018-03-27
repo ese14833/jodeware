@@ -27,9 +27,14 @@ namespace jodeware2.View
         async void hinzufuegen(Object sender, EventArgs e)
         {
             var produkt = (Produkt)BindingContext;
-            await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
-            await DisplayAlert("Erfolgreich", "Produkt wurde geaddet", "Okay");
-            await Navigation.PushModalAsync(new HomeScreen());
+            if (produkt != null)
+            {
+                await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
+                await DisplayAlert("Erfolgreich", "Produkt wurde geaddet.", "Okay");
+                await Navigation.PushModalAsync(new HomeScreen());
+            }
+            else
+                await DisplayAlert("Fehler!", "Produkt konnte nicht geaddet werden.", "Okay");
         }
 
         async void coloredadden(object sender, EventArgs e)

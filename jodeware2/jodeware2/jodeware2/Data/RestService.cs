@@ -14,7 +14,7 @@ namespace jodeware2.Data
     {
         HttpClient client;
         //string grant_type = "password";
-        public List<Produkt> Produkts { get; private set; }
+        public List<Produkt> Produkts { get; set; }
 
         public RestService()
         {
@@ -92,47 +92,5 @@ namespace jodeware2.Data
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //    public async Task<Token> Login(User user)
-        //    {
-        //        var postData = new List<KeyValuePair<string, string>>();
-        //        postData.Add(new KeyValuePair<string, string>("grant_type", grant_type));
-        //        postData.Add(new KeyValuePair<string, string>("username", user.username));
-        //        postData.Add(new KeyValuePair<string, string>("password", user.password));
-        //        var content = new FormUrlEncodedContent(postData);
-        //        var weburl = "www.test.com";
-        //        var response = await PostResponse<Token>(weburl, content);
-        //        DateTime dt = new DateTime();
-        //        dt = DateTime.Today;
-        //        response.expire_date = dt.AddSeconds(response.expire_in);
-        //        return response;
     }
-    }
+}

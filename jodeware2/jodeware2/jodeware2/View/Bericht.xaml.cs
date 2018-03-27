@@ -29,10 +29,36 @@ namespace jodeware2.View
             lstView.ItemsSource = products;
         }
 
-        async void Button_Clicked(Object sender, EventArgs e)
+        async void Menu_Clicked(Object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());
         }
+
+        private void Gestern_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Woche_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Monat_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
 
         async void coloredadden(object sender, EventArgs e)
         {
@@ -61,6 +87,7 @@ namespace jodeware2.View
             imageSender.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(new Bericht());
         }
+
     }
     public class CustomProduktCell : ViewCell
     {

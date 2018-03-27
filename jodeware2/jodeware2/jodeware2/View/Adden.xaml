@@ -9,17 +9,27 @@
 
 
             <StackLayout Margin="20" Padding="10">
-            <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
+
+                <Label x:Name="l_hersteller" Text="Hersteller:" Font="Calibri"/>
+                <Entry x:Name="e_hersteller" Text="{Binding Path=hersteller_her_id}" Placeholder="Hersteller" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
+                <Entry x:Name="e_kategorie" Text="{Binding Path=kategorie_kat_id}" Placeholder="Kategorie" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
                 <Entry x:Name="e_bezeichnung" Text="{Binding Path=pro_bezeichnung}" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
-            <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
-                <Entry x:Name="e_kategorie" Text="{Binding Path=kategorie_kat_id}" Placeholder="Kategorie" BackgroundColor="WhiteSmoke"/>
-            <Label x:Name="l_menge" Text="Menge" Font="Calibri"/>
+
+                <Label x:Name="l_beschreibung" Text="Beschreibung:" Font="Calibri"/>
+                <Entry x:Name="e_beschreibung" Text="{Binding Path=pro_beschreibung}" Placeholder="Beschreibung des Produkts" BackgroundColor="WhiteSmoke"/>
+
+                <!--<Label x:Name="l_menge" Text="Menge" Font="Calibri"/>
                 <Entry x:Name="e_menge" Text="{Binding Path=pro_id}" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
-            <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
-                <Entry x:Name="e_location" Text="{Binding Path=pro_beschreibung}" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>
+                
+                <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
+                <Entry x:Name="e_location" Text="{Binding Path=pro_beschreibung}" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>-->
 
                 <Button x:Name="b_kamera" Text="Produktfoto"  BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="Btn_kamera"/>
-                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" Clicked="hinzufuegen"/>
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
 
         </StackLayout>
 

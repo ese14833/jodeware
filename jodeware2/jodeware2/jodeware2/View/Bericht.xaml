@@ -1,17 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.Bericht">
+             x:Class="jodeware2.View.Bericht"
+             xmlns:ViewModels="clr-namespace:jodeware2.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <ViewModels:ProduktViewModel/>
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lstView" RowHeight="60">
+            <ListView x:Name="lstView" RowHeight="60" ItemsSource="{Binding ProduktList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding Produkt.pro_id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                    <Image Source="adden_colored.png" HorizontalOptions="End" IsVisible="{Binding Produkt.pro_bild}" />
+                                    <Label Text="{Binding pro_id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Image Source="adden_colored.png" HorizontalOptions="End" IsVisible="{Binding pro_bild}" />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -20,12 +26,12 @@
             </ListView>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
-                <Button Text="Gestern" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3"/>
-                <Button Text="Letzte Woche" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3"/>
-                <Button Text="Letzter Monat" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3"/>
+                <Button Text="Gestern" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Gestern_Clicked"/>
+                <Button Text="Letzte Woche" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Woche_Clicked"/>
+                <Button Text="Letzter Monat" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Monat_Clicked"/>
             </StackLayout>
 
-            <Button Text="Hauptmenü" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
+            <Button Text="Hauptmenü" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Menu_Clicked"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 
