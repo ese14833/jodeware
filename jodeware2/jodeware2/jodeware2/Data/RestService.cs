@@ -14,7 +14,7 @@ namespace jodeware2.Data
     {
         HttpClient client;
         //string grant_type = "password";
-        public List<Produkt> Produkts { get; set; }
+        public RootObject Produkts { get; set; }
 
         public RestService()
         {
@@ -26,9 +26,9 @@ namespace jodeware2.Data
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
         }
 
-        public async Task<List<Produkt>> RefreshDataAsync()
+        public async Task<RootObject> RefreshDataAsync()
         {
-            Produkts = new List<Produkt>();
+            Produkts = new RootObject();
 
             var uri = new Uri(string.Format(Constants.RestRead, string.Empty));
 
@@ -38,7 +38,7 @@ namespace jodeware2.Data
                 if(response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    Produkts = JsonConvert.DeserializeObject<List<Produkt>>(content);
+                    Produkts = JsonConvert.DeserializeObject<RootObject>(content);
                 }
             } catch (Exception ex)
             {
@@ -76,7 +76,7 @@ namespace jodeware2.Data
             }
         }
 
-        public async Task DeleteProduktAsync(int id)
+        public async Task DeleteProduktAsync(string id)
         {
             var uri = new Uri(string.Format(Constants.RestDelete, id));
             try
@@ -91,6 +91,11 @@ namespace jodeware2.Data
             {
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
+        }
+
+        Task<List<Produkt>> IRestService.RefreshDataAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

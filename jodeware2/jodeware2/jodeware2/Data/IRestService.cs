@@ -10,6 +10,6 @@ namespace jodeware2.Data
     {
         Task<List<Produkt>> RefreshDataAsync();
         Task SaveProduktAsync(Produkt produkt, bool isNewProdukt);
-        Task DeleteProduktAsync(int id); 
+        Task DeleteProduktAsync(string id); 
     }
 }

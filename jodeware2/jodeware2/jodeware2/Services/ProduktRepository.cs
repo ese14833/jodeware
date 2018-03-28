@@ -21,12 +21,12 @@ namespace jodeware2.Services
             get { return _produktList; }
         }
 
-        public bool DoesProduktExist(int id)
+        public bool DoesProduktExist(string id)
         {
             return _produktList.Any(produkt => produkt.pro_id == id);
         }
 
-        public Produkt Find(int id)
+        public Produkt Find(string id)
         {
             return _produktList.Where(produkt => produkt.pro_id == id).FirstOrDefault();
         }
@@ -44,7 +44,7 @@ namespace jodeware2.Services
             _produktList.Insert(index, produkt);
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
             _produktList.Remove(this.Find(id));
         }
@@ -57,9 +57,9 @@ namespace jodeware2.Services
 
             var produkt1 = new Produkt
             {
-                pro_id = 1,
-                hersteller_her_id = 24,
-                kategorie_kat_id = 2,
+                pro_id = "1",
+                hersteller_her_id = "24",
+                kategorie_kat_id = "2",
                 pro_bezeichnung = "Coca Cola",
                 pro_bild = new Image { Source = "adden_colored.png" },
                 pro_beschreibung = "Soft Drink"
@@ -67,9 +67,9 @@ namespace jodeware2.Services
 
             var produkt2 = new Produkt
             {
-                pro_id = 2,
-                hersteller_her_id = 15,
-                kategorie_kat_id = 3,
+                pro_id = "2",
+                hersteller_her_id = "15",
+                kategorie_kat_id = "3",
                 pro_bezeichnung = "Schokokekse",
                 pro_bild = new Image { Source = "adden_colored.png" },
                 pro_beschreibung = "Kekse"
@@ -77,9 +77,9 @@ namespace jodeware2.Services
 
             var produkt3 = new Produkt
             {
-                pro_id = 3,
-                hersteller_her_id = 9,
-                kategorie_kat_id = 6,
+                pro_id = "3",
+                hersteller_her_id = "9",
+                kategorie_kat_id = "6",
                 pro_bezeichnung = "Küchenrolle",
                 pro_bild = new Image { Source = "adden_colored.png" },
                 pro_beschreibung = "Papier"

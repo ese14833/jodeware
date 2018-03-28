@@ -1,4 +1,6 @@
-﻿using jodeware2.Models;
+﻿using jodeware2.Data;
+using jodeware2.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,20 +16,37 @@ namespace jodeware2.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Bericht : ContentPage
     {
-        public ObservableCollection<Produkt> products { get; set; }
+        public RestService restService;
         public Bericht()
         {
             InitializeComponent();
-            products = new ObservableCollection<Produkt>();
-            ListView lstView = new ListView();
-            lstView.RowHeight = 60;
             this.Title = "Berichte";
-            lstView.ItemTemplate = new DataTemplate(typeof(CustomProduktCell));
-            products.Add(new Produkt { pro_id = 1, hersteller_her_id = 24, kategorie_kat_id = 2, pro_bezeichnung = "Coca Cola", pro_bild = new Image { Source = "adden_colored.png" }, pro_beschreibung = "Soft Drink"});
-            products.Add(new Produkt { pro_id = 2, hersteller_her_id = 35, kategorie_kat_id = 1, pro_bezeichnung = "Fanta", pro_bild = new Image { Source = "adden_colored.png" }, pro_beschreibung = "Soft Drink" });
-            products.Add(new Produkt { pro_id = 3, hersteller_her_id = 19, kategorie_kat_id = 7, pro_bezeichnung = "Sprite", pro_bild = new Image { Source = "adden_colored.png" }, pro_beschreibung = "Soft Drink" });
-            lstView.ItemsSource = products;
+            GetJSON();
         }
+
+        public async void GetJSON()
+        {
+            restService = new RestService();
+            RootObject rootObject = new RootObject();
+            lstView.RowHeight = 60;
+            rootObject = await restService.RefreshDataAsync();
+            lstView.ItemsSource = rootObject.produkt;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         async void Menu_Clicked(Object sender, EventArgs e)
         {

@@ -15,7 +15,7 @@ namespace jodeware2.Models
         public static Color MainTextColor = Color.White;
         // REST Service URLs
         public static string RestInsert = "http://test.jodeware.com/api/product/insertProduct.php";
-        public static string RestRead = "http://test.jodeware.com/api/product/readProduct.php";
+        public static string RestRead = "http://test.jodeware.com/api/product/readProduct2.php";
         public static string RestUpdate = "http://test.jodeware.com/api/product/updateProduct.php";
         public static string RestDelete = "http://test.jodeware.com/api/product/deleteProduct.php";
         // Credentials that are har coded into the REST service

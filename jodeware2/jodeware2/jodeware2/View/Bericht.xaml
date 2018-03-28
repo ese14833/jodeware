@@ -2,22 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.Bericht"
-             xmlns:ViewModels="clr-namespace:jodeware2.ViewModels">
-    
-    <ContentPage.BindingContext>
-        <ViewModels:ProduktViewModel/>
-    </ContentPage.BindingContext>
-    
+             xmlns:local="clr-namespace:jodeware2"
+             Title="Berichte"
+             BackgroundColor="LightBlue">
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lstView" RowHeight="60" ItemsSource="{Binding ProduktList}">
+            <ListView x:Name="lstView" RowHeight="60" SeparatorVisibility="Default">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding pro_id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                    <Image Source="adden_colored.png" HorizontalOptions="End" IsVisible="{Binding pro_bild}" />
+                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding pro_id}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding pro_beschreibung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding pro_bezeichnung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding hersteller_her_id, StringFormat=', Hersteller ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding kategorie_kat_id, StringFormat=', Kategorie ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
