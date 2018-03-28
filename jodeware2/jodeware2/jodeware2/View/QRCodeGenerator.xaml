@@ -15,7 +15,8 @@
 
             <StackLayout>
 
-                <Button x:Name="share_link" Text="Besuche die Webseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Btn_sharelink"/>
+                <Button x:Name="share_link" Text="Teile deine Webseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Btn_sharelink"/>
+                <Button x:Name="go_website" Text="Besuche deine Webseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Btn_visitsite"/>
                 <Button x:Name="home" Text="Home" VerticalOptions="Center" BackgroundColor="DarkGray" Clicked="Btn_home"/>
 
             </StackLayout>

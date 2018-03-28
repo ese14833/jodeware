@@ -19,16 +19,12 @@ namespace jodeware2.View
 
         public void Btn_bgchanger(object sender, EventArgs e)
         {
-          
-
             this.BackgroundColor = Color.DarkGray;
-
         }
 
         async void Btn_home(Object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());
         }
-
 	}
 }

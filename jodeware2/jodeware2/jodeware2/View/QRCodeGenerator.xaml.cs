@@ -38,6 +38,17 @@ namespace jodeware2.View
 
         private void Btn_sharelink(object sender, EventArgs e)
         {
+            CrossShare.Current.Share(new Plugin.Share.Abstractions.ShareMessage
+            {
+                Text = "Besuche unsere Webseite",
+                Title = "JodeWare",
+                Url = "http://jodeware.com"
+            });
+        }
+
+
+        private void Btn_visitsite(object sender, EventArgs e)
+        {
             CrossShare.Current.OpenBrowser("http://www.jodeware.com");
         }
 
