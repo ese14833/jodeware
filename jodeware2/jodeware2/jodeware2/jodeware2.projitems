@@ -34,10 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProduktViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)View\Adden - Kopieren.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>Adden.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Adden.xaml.cs">
       <DependentUpon>Adden.xaml</DependentUpon>
       <SubType>Code</SubType>
