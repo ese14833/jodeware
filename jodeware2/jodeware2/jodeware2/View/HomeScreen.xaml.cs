@@ -17,6 +17,7 @@ namespace jodeware2.View
 
         public HomeScreen()
         {
+
             InitializeComponent();
 
 

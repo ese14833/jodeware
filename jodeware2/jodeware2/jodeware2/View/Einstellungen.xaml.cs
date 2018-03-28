@@ -30,8 +30,6 @@ namespace jodeware2.View
 
             HomeScreen start = new HomeScreen();
             start.BackgroundColor = Color.DarkGray;
-           
-
 
             this.BackgroundColor = Color.DarkGray;
 
