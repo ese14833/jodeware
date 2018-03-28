@@ -75,7 +75,6 @@
                         <Button Text="QR - Code" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredqr"/>
                     </StackLayout>
 
-  
                 </StackLayout>
 
 

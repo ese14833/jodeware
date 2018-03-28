@@ -15,6 +15,8 @@ namespace jodeware2.View
     {
 
 
+        Color background;
+
         public HomeScreen()
         {
 
@@ -22,6 +24,8 @@ namespace jodeware2.View
 
 
             Title = "Startseite";
+
+            background = Color.DarkGray;
 
 
             logo = new Image { Source = "jodewarelogo.png" };
@@ -41,7 +45,6 @@ namespace jodeware2.View
 
             var imageSenderQR = new Image { Source = "qrcode.png" };
             imageSenderSettings.IsVisible = true;
-
 
             ScrollView scroll = new ScrollView();
         }
@@ -85,5 +88,6 @@ namespace jodeware2.View
         {
             await Navigation.PushModalAsync(new QRCodeGenerator());
         }
+
     }
 }

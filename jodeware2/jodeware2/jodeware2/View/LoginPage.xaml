@@ -18,6 +18,8 @@
             <Label x:Name="lbl_password" Text="Passwort"/>
             <Entry x:Name="entry_password" Placeholder="Passwort" BackgroundColor="WhiteSmoke" IsPassword="True"  />
             <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure" BackgroundColor="WhiteSmoke" BorderRadius="10" BorderColor="Black"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

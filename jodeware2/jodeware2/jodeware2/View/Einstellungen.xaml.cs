@@ -19,17 +19,7 @@ namespace jodeware2.View
 
         public void Btn_bgchanger(object sender, EventArgs e)
         {
-            Adden add = new Adden();
-            add.BackgroundColor = Color.DarkGray;
-
-            Bericht ber = new Bericht();
-            ber.BackgroundColor = Color.DarkGray;
-
-            Bearbeiten edit = new Bearbeiten();
-            edit.BackgroundColor = Color.DarkGray;
-
-            HomeScreen start = new HomeScreen();
-            start.BackgroundColor = Color.DarkGray;
+          
 
             this.BackgroundColor = Color.DarkGray;
 
