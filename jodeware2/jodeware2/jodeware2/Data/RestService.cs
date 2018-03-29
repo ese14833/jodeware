@@ -92,10 +92,5 @@ namespace jodeware2.Data
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
         }
-
-        Task<List<Produkt>> IRestService.RefreshDataAsync()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

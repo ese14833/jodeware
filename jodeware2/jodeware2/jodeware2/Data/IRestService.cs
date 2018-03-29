@@ -8,7 +8,7 @@ namespace jodeware2.Data
 {
     public interface IRestService
     {
-        Task<List<Produkt>> RefreshDataAsync();
+        Task<RootObject> RefreshDataAsync();
         Task SaveProduktAsync(Produkt produkt, bool isNewProdukt);
         Task DeleteProduktAsync(string id); 
     }
