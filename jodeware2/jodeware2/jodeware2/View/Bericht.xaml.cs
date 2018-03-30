@@ -46,21 +46,6 @@ namespace jodeware2.View
             lstView.ItemsSource = rootObject.produkt;
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         async void Menu_Clicked(Object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());

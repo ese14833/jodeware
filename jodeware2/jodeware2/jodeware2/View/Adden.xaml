@@ -7,8 +7,8 @@
 
             <StackLayout Margin="20" Padding="10">
 
-                <Label x:Name="l_id" Text="ID:" Font="Calibri"/>
-                <Entry x:Name="e_id" Text="{Binding Path=pro_id}" Placeholder="ID" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+                <!--<Label x:Name="l_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_id" Text="{Binding Path=pro_id}" Placeholder="ID" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
 
                 <Label x:Name="l_hersteller" Text="Hersteller:" Font="Calibri"/>
                 <Entry x:Name="e_hersteller" Text="{Binding Path=hersteller_her_id}" Placeholder="Hersteller" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>

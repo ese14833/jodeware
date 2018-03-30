@@ -8,7 +8,7 @@ namespace jodeware2.Models
 {
     public class Produkt
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         public string pro_id { get; set; }
         public string pro_bezeichnung { get; set; }
         public object pro_bild { get; set; }

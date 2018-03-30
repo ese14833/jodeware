@@ -76,12 +76,35 @@ namespace jodeware2.Data
             }
         }
 
+        //public async Task DeleteProduktAsync(string id)
+        //{
+
+        //    var uri = new Uri(string.Format(Constants.RestDelete, id));
+        //    try
+        //    {
+        //        var response = await client.DeleteAsync(uri);
+        //        if (response.IsSuccessStatusCode)
+        //        {
+        //            Debug.WriteLine(@"				Produkt successfully deleted.");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine(@"				ERROR {0}", ex.Message);
+        //    }
+        //}
+
         public async Task DeleteProduktAsync(string id)
         {
-            var uri = new Uri(string.Format(Constants.RestDelete, id));
+
+            var uri = new Uri(string.Format(Constants.RestDelete, string.Empty));
+            Produkt produkt = new Produkt();
+            produkt.pro_id = id;
             try
             {
-                var response = await client.DeleteAsync(uri);
+                var json = JsonConvert.SerializeObject(produkt);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
                     Debug.WriteLine(@"				Produkt successfully deleted.");

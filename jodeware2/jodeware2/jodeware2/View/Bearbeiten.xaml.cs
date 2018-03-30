@@ -1,4 +1,5 @@
-﻿using jodeware2.Models;
+﻿using jodeware2.Data;
+using jodeware2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,13 +17,27 @@ namespace jodeware2.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Bearbeiten : ContentPage
 	{
+        public RestService restService;
         bool isNewProdukt = false;
+        private List<Produkt> produkts = null; 
         public Bearbeiten ()
 		{
             InitializeComponent();
             Title = "Ware bearbeiten";
-            produktlist.ItemsSource = ProduktListeTest.StringListe;
+            //produktlist.ItemsSource = ProduktListeTest.StringListe;
+            GetJSON();
 
+
+        }
+
+        public async void GetJSON()
+        {
+            restService = new RestService();
+            RootObject rootObject = new RootObject();
+            produktlist.RowHeight = 60;
+            rootObject = await restService.RefreshDataAsync();
+            produktlist.ItemsSource = rootObject.produkt;
+            produkts = rootObject.produkt;
 
         }
 
@@ -31,10 +46,14 @@ namespace jodeware2.View
             produktlist.BeginRefresh();
 
             if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                produktlist.ItemsSource = ProduktListeTest.StringListe;
+            {
+                //produktlist.ItemsSource = ProduktListeTest.StringListe;
+                GetJSON();
+            }
             else
-                produktlist.ItemsSource = ProduktListeTest.StringListe.Where(i => i.Contains(e.NewTextValue));
-
+            {
+                produktlist.ItemsSource = produkts.Where(i => i.pro_bezeichnung.Contains(e.NewTextValue));
+            }
             produktlist.EndRefresh();
         }
 
@@ -45,9 +64,12 @@ namespace jodeware2.View
 
         async void delete_Clicked(object sender, EventArgs e)
         {
-            var produkt = (Produkt)BindingContext;
+            var pro = (Xamarin.Forms.Button)sender;
+            Produkt produkt = (from prod in produkts
+                               where prod.pro_id == pro.CommandParameter.ToString()
+                               select prod).FirstOrDefault<Produkt>();
             await App.produktManager.DeleteTaskAsync(produkt);
-            await Navigation.PopAsync();
+            await Navigation.PushModalAsync(new Bearbeiten());
         }
 
         async void save_Clicked(object sender, EventArgs e)
