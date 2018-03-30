@@ -6,6 +6,8 @@ namespace jodeware2.Models
 {
     public class RootObject
     {
+
         public List<Produkt> produkt { get; set; }
+
     }
 }

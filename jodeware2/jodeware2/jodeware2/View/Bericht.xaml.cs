@@ -1,5 +1,6 @@
 ﻿using jodeware2.Data;
 using jodeware2.Models;
+using jodeware2.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,18 @@ namespace jodeware2.View
             this.Title = "Berichte";
             GetJSON();
         }
+
+        /*private void Suche_nachEingabe(object sender, TextChangedEventArgs e)
+        {
+            lstView.BeginRefresh();
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+                lstView.ItemsSource = RootObject.produkt;
+            else
+                lstView.ItemsSource = RootObject.produkt.Where(i => i.Contains(e.NewTextValue));
+
+            lstView.EndRefresh();
+        }*/
 
         public async void GetJSON()
         {

@@ -38,8 +38,6 @@ namespace jodeware2.View
             produktlist.EndRefresh();
         }
 
-
-
         async void home_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());

@@ -7,6 +7,9 @@
 
     <ContentPage.Content>
         <StackLayout>
+
+            <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
+
             <ListView x:Name="lstView" RowHeight="60" SeparatorVisibility="Default">
                 <ListView.ItemTemplate>
                     <DataTemplate>
