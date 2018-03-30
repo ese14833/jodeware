@@ -74,7 +74,10 @@ namespace jodeware2.View
 
         async void save_Clicked(object sender, EventArgs e)
         {
-            var produkt = (Produkt)BindingContext;
+            var pro = (Xamarin.Forms.Button)sender;
+            Produkt produkt = (from prod in produkts
+                               where prod.pro_id == pro.CommandParameter.ToString()
+                               select prod).FirstOrDefault<Produkt>();
             await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
             await Navigation.PopAsync();
         }
