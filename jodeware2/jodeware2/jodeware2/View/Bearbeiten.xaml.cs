@@ -23,8 +23,22 @@ namespace jodeware2.View
             Title = "Ware bearbeiten";
             produktlist.ItemsSource = ProduktListeTest.StringListe;
 
-            
+
         }
+
+        private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            produktlist.BeginRefresh();
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+                produktlist.ItemsSource = ProduktListeTest.StringListe;
+            else
+                produktlist.ItemsSource = ProduktListeTest.StringListe.Where(i => i.Contains(e.NewTextValue));
+
+            produktlist.EndRefresh();
+        }
+
+
 
         async void home_Clicked(object sender, EventArgs e)
         {

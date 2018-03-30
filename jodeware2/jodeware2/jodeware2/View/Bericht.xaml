@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.Bericht"
              xmlns:local="clr-namespace:jodeware2"
-             Title="Berichte"
-             BackgroundColor="LightBlue">
+             Title="Berichte">
 
     <ContentPage.Content>
         <StackLayout>

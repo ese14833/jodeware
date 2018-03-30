@@ -7,7 +7,7 @@
         <StackLayout>
             <StackLayout Margin="20" Padding="10">
 
-                <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
+                <SearchBar x:Name="suche" Placeholder="Suche nach Produkten" TextChanged="SearchBar_OnTextChanged"/>
 
                 <ListView x:Name="produktlist"/>
 
