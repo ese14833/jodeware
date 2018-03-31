@@ -32,8 +32,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProduktListeTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Regal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Token.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktService.cs" />

@@ -20,14 +20,39 @@ namespace jodeware2.Data
             return restService.RefreshDataAsync();
         }
 
-        public Task SaveTaskAsync (Produkt produkt, bool isNewProdukt = false)
+        public Task SaveTaskAsync (Object ob, bool isNewProdukt = false)
         {
-            return restService.SaveProduktAsync(produkt, isNewProdukt);
+            return restService.SaveAsync(ob, isNewProdukt);
         }
 
-        public Task DeleteTaskAsync (Produkt produkt)
+        public Task DeleteTaskAsync (Object ob)
         {
-            return restService.DeleteProduktAsync(produkt.pro_id);
+            if (ob is Produkt)
+            {
+                Produkt pro = new Produkt();
+                pro = (Produkt)ob;
+                return restService.DeleteProduktAsync(pro.pro_id);
+            }
+            if (ob is Kategorie)
+            {
+                Kategorie kat = new Kategorie();
+                kat = (Kategorie)ob;
+                return restService.DeleteKategorieAsync(kat.kat_id);
+            }
+            if (ob is Hersteller)
+            {
+                Hersteller her = new Hersteller();
+                her = (Hersteller)ob;
+                return restService.DeleteHerstellerAsync(her.her_id);
+            }
+            if (ob is Regal)
+            {
+                Regal regal = new Regal();
+                regal = (Regal)ob;
+                return restService.DeleteRegalAsync(regal.reg_id);
+            }
+            return null;
+            //return restService.DeleteProduktAsync(produkt.pro_id);
         }
     }
 }

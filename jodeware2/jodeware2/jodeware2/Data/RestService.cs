@@ -47,13 +47,30 @@ namespace jodeware2.Data
             return Produkts;
         }
 
-        public async Task SaveProduktAsync(Produkt produkt, bool isNewProdukt = false)
+        public async Task SaveAsync(Object ob, bool isNewProdukt = false)
         {
-            var uri = new Uri(string.Format(Constants.ProduktInsert, string.Empty));
+            Uri uri = null;
+
+            if (ob is Produkt)
+            {
+                uri = new Uri(string.Format(Constants.ProduktInsert, string.Empty));
+            }
+            if (ob is Kategorie)
+            {
+                uri = new Uri(string.Format(Constants.KategorieInsert, string.Empty));
+            }
+            if (ob is Hersteller)
+            {
+                uri = new Uri(string.Format(Constants.HerstellerInsert, string.Empty));
+            }
+            if(ob is Regal)
+            {
+                uri = new Uri(string.Format(Constants.RegalInsert, string.Empty));
+            }
 
             try
             {
-                var json = JsonConvert.SerializeObject(produkt);
+                var json = JsonConvert.SerializeObject(ob);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = null;
@@ -76,24 +93,6 @@ namespace jodeware2.Data
             }
         }
 
-        //public async Task DeleteProduktAsync(string id)
-        //{
-
-        //    var uri = new Uri(string.Format(Constants.ProduktDelete, id));
-        //    try
-        //    {
-        //        var response = await client.DeleteAsync(uri);
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            Debug.WriteLine(@"				Produkt successfully deleted.");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Debug.WriteLine(@"				ERROR {0}", ex.Message);
-        //    }
-        //}
-
         public async Task DeleteProduktAsync(string id)
         {
 
@@ -103,6 +102,72 @@ namespace jodeware2.Data
             try
             {
                 var json = JsonConvert.SerializeObject(produkt);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
+    
+        public async Task DeleteKategorieAsync(string id)
+        {
+
+            var uri = new Uri(string.Format(Constants.KategorieDelete, string.Empty));
+            Kategorie kat = new Kategorie();
+            kat.kat_id = id;
+            try
+            {
+                var json = JsonConvert.SerializeObject(kat);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
+
+        public async Task DeleteHerstellerAsync(string id)
+        {
+
+            var uri = new Uri(string.Format(Constants.HerstellerDelete, string.Empty));
+            Hersteller her = new Hersteller();
+            her.her_id = id;
+            try
+            {
+                var json = JsonConvert.SerializeObject(her);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
+
+        public async Task DeleteRegalAsync(string id)
+        {
+
+            var uri = new Uri(string.Format(Constants.RegalDelete, string.Empty));
+            Regal regal = new Regal();
+            regal.reg_id = id;
+            try
+            {
+                var json = JsonConvert.SerializeObject(regal);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)

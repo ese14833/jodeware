@@ -61,7 +61,6 @@ namespace jodeware2.Services
                 hersteller_her_id = "24",
                 kategorie_kat_id = "2",
                 pro_bezeichnung = "Coca Cola",
-                pro_bild = new Image { Source = "adden_colored.png" },
                 pro_beschreibung = "Soft Drink"
             };
 
@@ -71,7 +70,6 @@ namespace jodeware2.Services
                 hersteller_her_id = "15",
                 kategorie_kat_id = "3",
                 pro_bezeichnung = "Schokokekse",
-                pro_bild = new Image { Source = "adden_colored.png" },
                 pro_beschreibung = "Kekse"
             };
 
@@ -81,7 +79,6 @@ namespace jodeware2.Services
                 hersteller_her_id = "9",
                 kategorie_kat_id = "6",
                 pro_bezeichnung = "Küchenrolle",
-                pro_bild = new Image { Source = "adden_colored.png" },
                 pro_beschreibung = "Papier"
             };
 
