@@ -63,6 +63,32 @@
                     </StackLayout>
 
                 </StackLayout>
+                
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Button Text="Lagerbestand hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
+                    </StackLayout>
+
+                </StackLayout>
+                
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Button Text="Verkauf hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="VerkaufAdden_Clicked"/>
+                    </StackLayout>
+
+                </StackLayout>
 
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">

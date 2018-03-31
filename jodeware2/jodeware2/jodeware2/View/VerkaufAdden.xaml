@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.VerkaufAdden">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" Padding="10">
+
+                <Label x:Name="l_ver_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_ver_id" Text="{Binding Path=ver_id}" Placeholder="ID des Regals" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_ver_pro" Text="Produkt:" Font="Calibri"/>
+                <Entry x:Name="e_ver_pro" Text="{Binding Path=produkt_pro_id}" Placeholder="Produkt" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_ver_menge" Text="Menge:" Font="Calibri"/>
+                <Entry x:Name="e_ver_menge" Text="{Binding Path=ver_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_ver_datum" Text="Datum:" Font="Calibri"/>
+                <!--<Entry x:Name="e_ver_datum" Text="{Binding Path=ver_datum}" Placeholder="Datum" BackgroundColor="WhiteSmoke"/>-->
+                <DatePicker x:Name="d_ver_datum"/>
+
+
+                <Label x:Name="l_ver_betrag" Text="Betrag:" Font="Calibri"/>
+                <Entry x:Name="e_ver_betrag" Text="{Binding Path=ver_betrag}" Placeholder="Betrag" BackgroundColor="WhiteSmoke"/>
+
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

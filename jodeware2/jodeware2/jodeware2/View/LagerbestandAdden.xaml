@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.LagerbestandAdden">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" Padding="10">
+
+                <Label x:Name="l_lager_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_lager_id" Text="{Binding Path=lag_id}" Placeholder="ID des Lagerbestands" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_lager_pro" Text="Produkt:" Font="Calibri"/>
+                <Entry x:Name="e_lager_pro" Text="{Binding Path=produkt_pro_id}" Placeholder="Produkt" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_lager_reg" Text="Regal:" Font="Calibri"/>
+                <Entry x:Name="e_lager_reg" Text="{Binding Path=regal_reg_id}" Placeholder="Regal" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_lager_preis" Text="Preis:" Font="Calibri"/>
+                <Entry x:Name="e_lager_preis" Text="{Binding Path=lag_preis}" Placeholder="Preis" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_lager_akt" Text="Aktuelle Menge:" Font="Calibri"/>
+                <Entry x:Name="e_lager_akt" Text="{Binding Path=lag_akt_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_lager_res" Text="Reservierte Menge:" Font="Calibri"/>
+                <Entry x:Name="e_lager_res" Text="{Binding Path=lag_res_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
+
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

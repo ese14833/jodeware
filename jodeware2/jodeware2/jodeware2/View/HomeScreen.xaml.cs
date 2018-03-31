@@ -103,5 +103,15 @@ namespace jodeware2.View
         {
             await Navigation.PushModalAsync(new RegalAdden());
         }
+
+        async void LagerbestandAdden_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LagerbestandAdden());
+        }
+
+        async void VerkaufAdden_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new VerkaufAdden());
+        }
     }
 }
