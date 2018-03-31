@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.RegalAdden">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" Padding="10">
+
+                <Label x:Name="l_regal_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_regal_id" Text="{Binding Path=reg_id}" Placeholder="ID des Regals" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_regal_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
+                <Entry x:Name="e_regal_bezeichnung" Text="{Binding Path=reg_bezeichnung}" Placeholder="Name des Regals" BackgroundColor="WhiteSmoke"/>
+
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,7 +16,6 @@ namespace jodeware2.View
 	{
         bool isNewProdukt;
 
-
 		public ProduktAdden ()
 		{
 			InitializeComponent ();
@@ -28,12 +27,11 @@ namespace jodeware2.View
         {
             Produkt produkt = new Produkt();
             produkt.pro_bezeichnung = e_bezeichnung.Text;
-            //produkt.pro_bild = null;
             produkt.pro_beschreibung = e_beschreibung.Text;
             produkt.hersteller_her_id = e_hersteller.Text;
             produkt.kategorie_kat_id = e_kategorie.Text;
 
-            if (produkt != null)
+            if (produkt != null && produkt.pro_bezeichnung != null && produkt.pro_bezeichnung != null )
             {
                 await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
                 await DisplayAlert("Erfolgreich", "Produkt wurde geaddet.", "Okay");

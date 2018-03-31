@@ -14,5 +14,7 @@ namespace jodeware2.Data
         Task DeleteKategorieAsync(string id);
         Task DeleteHerstellerAsync(string id);
         Task DeleteRegalAsync(string id);
+        Task DeleteLagerbestandAsync(string id);
+        Task DeleteVerkaufAsync(string id);
     }
 }

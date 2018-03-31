@@ -7,6 +7,6 @@ namespace jodeware2.Models
     public class Regal
     {
         public string reg_id { get; set; }
-        public string reg_nummer { get; set; }
+        public string reg_bezeichnung { get; set; }
     }
 }

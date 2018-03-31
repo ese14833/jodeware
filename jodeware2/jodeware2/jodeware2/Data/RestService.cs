@@ -67,6 +67,14 @@ namespace jodeware2.Data
             {
                 uri = new Uri(string.Format(Constants.RegalInsert, string.Empty));
             }
+            if (ob is Lagerbestand)
+            {
+                uri = new Uri(string.Format(Constants.LagerbestandInsert, string.Empty));
+            }
+            if (ob is Verkauf)
+            {
+                uri = new Uri(string.Format(Constants.VerkaufInsert, string.Empty));
+            }
 
             try
             {
@@ -168,6 +176,48 @@ namespace jodeware2.Data
             try
             {
                 var json = JsonConvert.SerializeObject(regal);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
+
+        public async Task DeleteLagerbestandAsync(string id)
+        {
+
+            var uri = new Uri(string.Format(Constants.LagerbestandDelete, string.Empty));
+            Lagerbestand lager = new Lagerbestand();
+            lager.lag_id = id;
+            try
+            {
+                var json = JsonConvert.SerializeObject(lager);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
+        public async Task DeleteVerkaufAsync(string id)
+        {
+            var uri = new Uri(string.Format(Constants.VerkaufDelete, string.Empty));
+            Verkauf verkauf = new Verkauf();
+            verkauf.ver_id = id;
+            try
+            {
+                var json = JsonConvert.SerializeObject(verkauf);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)

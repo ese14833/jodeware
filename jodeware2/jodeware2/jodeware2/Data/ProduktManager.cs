@@ -51,6 +51,18 @@ namespace jodeware2.Data
                 regal = (Regal)ob;
                 return restService.DeleteRegalAsync(regal.reg_id);
             }
+            if (ob is Lagerbestand)
+            {
+                Lagerbestand lager = new Lagerbestand();
+                lager = (Lagerbestand)ob;
+                return restService.DeleteRegalAsync(lager.lag_id);
+            }
+            if (ob is Verkauf)
+            {
+                Verkauf verkauf = new Verkauf();
+                verkauf = (Verkauf)ob;
+                return restService.DeleteRegalAsync(verkauf.ver_id);
+            }
             return null;
             //return restService.DeleteProduktAsync(produkt.pro_id);
         }

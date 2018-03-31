@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.KategorieAdden">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" Padding="10">
+
+                <Label x:Name="l_kat_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_kat_id" Text="{Binding Path=kat_id}" Placeholder="ID der Kategorie" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_kat_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
+                <Entry x:Name="e_kat_bezeichnung" Text="{Binding Path=kat_bezeichnung}" Placeholder="Name der Kategorie" BackgroundColor="WhiteSmoke"/>
+
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

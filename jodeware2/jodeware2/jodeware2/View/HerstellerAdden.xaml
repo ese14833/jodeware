@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.HerstellerAdden">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" Padding="10">
+
+                <Label x:Name="l_her_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_her_id" Text="{Binding Path=her_id}" Placeholder="ID des Herstellers" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_her_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
+                <Entry x:Name="e_her_bezeichnung" Text="{Binding Path=her_bezeichnung}" Placeholder="Name des Herstellers" BackgroundColor="WhiteSmoke"/>
+
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

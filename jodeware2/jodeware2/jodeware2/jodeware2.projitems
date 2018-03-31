@@ -28,14 +28,24 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Hersteller.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Kategorie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Lagerbestand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Produkt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProduktListeTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Regal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Verkauf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProduktViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\HerstellerAdden.xaml.cs">
+      <DependentUpon>HerstellerAdden.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\KategorieAdden.xaml.cs">
+      <DependentUpon>KategorieAdden.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\ProduktAdden.xaml.cs">
       <DependentUpon>ProduktAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -62,6 +72,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml.cs">
       <DependentUpon>QRCodeGenerator.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\RegalAdden.xaml.cs">
+      <DependentUpon>RegalAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -116,6 +130,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\HerstellerAdden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\KategorieAdden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\RegalAdden.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
