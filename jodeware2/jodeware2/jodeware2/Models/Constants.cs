@@ -16,7 +16,7 @@ namespace jodeware2.Models
 
         // REST: Produkt URLs
         public static string ProduktInsert = "http://test.jodeware.com/api/produkt/insertProdukt.php";
-        public static string ProduktRead = "http://test.jodeware.com/api/produkt/readProdukt.php";
+        public static string ProduktRead = "http://test.jodeware.com/api/produkt/readProdukt2.php";
         public static string ProduktUpdate = "http://test.jodeware.com/api/produkt/updateProdukt.php";
         public static string ProduktDelete = "http://test.jodeware.com/api/produkt/deleteProdukt.php";
 
