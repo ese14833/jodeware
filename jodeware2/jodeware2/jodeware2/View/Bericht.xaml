@@ -1,13 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.Bericht">
+             x:Class="jodeware2.View.Bericht"
+             xmlns:local="clr-namespace:jodeware2"
+             Title="Berichte">
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView>
-                
+
+            <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
+
+            <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,20,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding pro_id}" BackgroundColor="Transparent" FontSize="19" FontFamily="Calibri"/>
+                                    <Label Text="{Binding pro_bezeichnung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding pro_beschreibung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding hersteller_her_id, StringFormat=', Hersteller ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding kategorie_kat_id, StringFormat=', Kategorie ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Home" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+                <Button Text="Gestern" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Gestern_Clicked"/>
+                <Button Text="Letzte Woche" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Woche_Clicked"/>
+                <Button Text="Letzter Monat" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Monat_Clicked"/>
+            </StackLayout>
+
+            <Button Text="Hauptmenü" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Menu_Clicked"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 
@@ -15,26 +42,18 @@
                     <Button Text="Ware hinzufügen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden"/>
                 </StackLayout>
 
-
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Button Text="Waren bearbeiten" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="edit_colored.png" Clicked="colorededit"/>
                 </StackLayout>
-
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Button Text="Berichte" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="statistic_colored.png" Clicked="coloredbericht"/>
                 </StackLayout>
 
-
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Button Text="Einstellungen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="settings_colored.png" Clicked="coloredsettings"/>
                 </StackLayout>
-
-
-
             </StackLayout>
-
-
 
         </StackLayout>
     </ContentPage.Content>

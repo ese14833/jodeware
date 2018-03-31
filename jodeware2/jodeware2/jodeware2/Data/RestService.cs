@@ -14,7 +14,7 @@ namespace jodeware2.Data
     {
         HttpClient client;
         //string grant_type = "password";
-        public List<Produkt> Produkts { get; private set; }
+        public RootObject Produkts { get; set; }
 
         public RestService()
         {
@@ -26,11 +26,11 @@ namespace jodeware2.Data
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
         }
 
-        public async Task<List<Produkt>> RefreshDataAsync()
+        public async Task<RootObject> RefreshDataAsync()
         {
-            Produkts = new List<Produkt>();
+            Produkts = new RootObject();
 
-            var uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            var uri = new Uri(string.Format(Constants.RestRead, string.Empty));
 
             try
             {
@@ -38,7 +38,7 @@ namespace jodeware2.Data
                 if(response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    Produkts = JsonConvert.DeserializeObject<List<Produkt>>(content);
+                    Produkts = JsonConvert.DeserializeObject<RootObject>(content);
                 }
             } catch (Exception ex)
             {
@@ -49,7 +49,7 @@ namespace jodeware2.Data
 
         public async Task SaveProduktAsync(Produkt produkt, bool isNewProdukt = false)
         {
-            var uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            var uri = new Uri(string.Format(Constants.RestInsert, string.Empty));
 
             try
             {
@@ -76,12 +76,35 @@ namespace jodeware2.Data
             }
         }
 
-        public async Task DeleteProduktAsync(int id)
+        //public async Task DeleteProduktAsync(string id)
+        //{
+
+        //    var uri = new Uri(string.Format(Constants.RestDelete, id));
+        //    try
+        //    {
+        //        var response = await client.DeleteAsync(uri);
+        //        if (response.IsSuccessStatusCode)
+        //        {
+        //            Debug.WriteLine(@"				Produkt successfully deleted.");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine(@"				ERROR {0}", ex.Message);
+        //    }
+        //}
+
+        public async Task DeleteProduktAsync(string id)
         {
-            var uri = new Uri(string.Format(Constants.RestUrl, id));
+
+            var uri = new Uri(string.Format(Constants.RestDelete, string.Empty));
+            Produkt produkt = new Produkt();
+            produkt.pro_id = id;
             try
             {
-                var response = await client.DeleteAsync(uri);
+                var json = JsonConvert.SerializeObject(produkt);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
                     Debug.WriteLine(@"				Produkt successfully deleted.");
@@ -92,47 +115,5 @@ namespace jodeware2.Data
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //    public async Task<Token> Login(User user)
-        //    {
-        //        var postData = new List<KeyValuePair<string, string>>();
-        //        postData.Add(new KeyValuePair<string, string>("grant_type", grant_type));
-        //        postData.Add(new KeyValuePair<string, string>("username", user.username));
-        //        postData.Add(new KeyValuePair<string, string>("password", user.password));
-        //        var content = new FormUrlEncodedContent(postData);
-        //        var weburl = "www.test.com";
-        //        var response = await PostResponse<Token>(weburl, content);
-        //        DateTime dt = new DateTime();
-        //        dt = DateTime.Today;
-        //        response.expire_date = dt.AddSeconds(response.expire_in);
-        //        return response;
     }
-    }
+}

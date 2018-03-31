@@ -9,7 +9,7 @@
 
         <StackLayout Padding="10" Margin="20" VerticalOptions="CenterAndExpand">
 
-            <Image x:Name="logo" Source = "jodewarelogo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            <Image x:Name="logo" Source = "jodewarelogo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
 
             <Label x:Name="Anmelden_Text" HorizontalOptions="CenterAndExpand"  TextColor="White"/>
 
@@ -18,6 +18,8 @@
             <Label x:Name="lbl_password" Text="Passwort"/>
             <Entry x:Name="entry_password" Placeholder="Passwort" BackgroundColor="WhiteSmoke" IsPassword="True"  />
             <Button x:Name="Btn_Anmelden" Text="Anmelden" Clicked="SignInProcedure" BackgroundColor="WhiteSmoke" BorderRadius="10" BorderColor="Black"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,7 +19,7 @@ namespace jodeware2.Services
             _repository = repository;
         }
 
-        public bool DoesProduktExist(int id)
+        public bool DoesProduktExist(string id)
         {
             //if (id == null)
             //{
@@ -29,7 +29,7 @@ namespace jodeware2.Services
             return _repository.DoesProduktExist(id);
         }
 
-        public Produkt Find(int id)
+        public Produkt Find(string id)
         {
             //if (id == null)
             //{
@@ -64,7 +64,7 @@ namespace jodeware2.Services
             _repository.Update(produkt);
         }
 
-        public void DeleteData(int id)
+        public void DeleteData(string id)
         {
             //if (id == null)
             //{

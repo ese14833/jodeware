@@ -3,21 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.Adden" Title="Ware hinzufügen - JodeWare">
     <ContentPage.Content>
-
-
         <StackLayout>
 
-
             <StackLayout Margin="20" Padding="10">
-            <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
-            <Entry x:Name="e_bezeichnung" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
-            <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
-            <Entry x:Name="e_kategorie" Placeholder="Kategorie" BackgroundColor="WhiteSmoke"/>
-            <Label x:Name="l_menge" Text="Menge" Font="Calibri"/>
-            <Entry x:Name="e_menge" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
-            <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
-            <Entry x:Name="e_location" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>
-            <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" Clicked="hinzufuegen"/>
+
+                <!--<Label x:Name="l_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_id" Text="{Binding Path=pro_id}" Placeholder="ID" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
+
+                <Label x:Name="l_hersteller" Text="Hersteller:" Font="Calibri"/>
+                <Entry x:Name="e_hersteller" Text="{Binding Path=hersteller_her_id}" Placeholder="Hersteller" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
+                <Entry x:Name="e_kategorie" Text="{Binding Path=kategorie_kat_id}" Placeholder="Kategorie" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+
+                <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
+                <Entry x:Name="e_bezeichnung" Text="{Binding Path=pro_bezeichnung}" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
+
+                <Label x:Name="l_beschreibung" Text="Beschreibung:" Font="Calibri"/>
+                <Entry x:Name="e_beschreibung" Text="{Binding Path=pro_beschreibung}" Placeholder="Beschreibung des Produkts" BackgroundColor="WhiteSmoke"/>
+
+                <!--<Label x:Name="l_menge" Text="Menge" Font="Calibri"/>
+                <Entry x:Name="e_menge" Text="{Binding Path=pro_id}" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+                
+                <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
+                <Entry x:Name="e_location" Text="{Binding Path=pro_beschreibung}" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>-->
+
+                <Button x:Name="b_kamera" Text="Produktfoto"  BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="Btn_kamera"/>
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
 
         </StackLayout>
 
@@ -27,11 +39,9 @@
                     <Button Text="Ware hinzufügen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden"/>
                 </StackLayout>
 
-
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Button Text="Waren bearbeiten" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="edit_colored.png" Clicked="colorededit"/>
                 </StackLayout>
-
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Button Text="Berichte" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="statistic_colored.png" Clicked="coloredbericht"/>
@@ -42,11 +52,9 @@
                     <Button Text="Einstellungen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="settings_colored.png" Clicked="coloredsettings"/>
                 </StackLayout>
 
-
             </StackLayout>
   
         </StackLayout>
-
 
     </ContentPage.Content>
 </ContentPage>

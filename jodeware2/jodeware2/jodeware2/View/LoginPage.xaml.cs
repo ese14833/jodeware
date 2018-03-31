@@ -25,6 +25,8 @@ namespace jodeware2.View
             Anmelden_Text.FontSize = 24;
             Anmelden_Text.Text = "Anmelden";
             Anmelden_Text.FontAttributes = FontAttributes.Bold;
+
+
 		}
 
         #pragma warning disable 1998

@@ -15,9 +15,6 @@ namespace jodeware2.Data
             restService = service;
         }
 
-
-
-        #region Liste
         public Task<List<Produkt>> GetTaskAsync()
         {
             return restService.RefreshDataAsync();

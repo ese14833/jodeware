@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.Einstellungen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="bgchanger" VerticalOptions="Center" Clicked="Btn_bgchanger"/>
+            <Button x:Name="home" VerticalOptions="Center" Clicked="Btn_home"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

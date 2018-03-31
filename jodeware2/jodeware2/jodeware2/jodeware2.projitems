@@ -26,19 +26,28 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Hersteller.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Kategorie.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Produkt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProduktListeTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Regal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RootObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Token.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProduktViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)View\Adden.xaml.cs">
       <DependentUpon>Adden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Bericht.xaml.cs">
       <DependentUpon>Bericht.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Einstellungen.xaml.cs">
+      <DependentUpon>Einstellungen.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\HomeScreen.xaml.cs">
@@ -51,6 +60,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Bearbeiten.xaml.cs">
       <DependentUpon>Bearbeiten.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml.cs">
+      <DependentUpon>QRCodeGenerator.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -84,6 +97,7 @@
     <Content Include="$(MSBuildThisFileDirectory)jodewarelogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)qrcode.png" />
     <Content Include="$(MSBuildThisFileDirectory)settings_colored.png" />
     <Content Include="$(MSBuildThisFileDirectory)statistic_colored.png" />
   </ItemGroup>
@@ -95,5 +109,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Einstellungen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

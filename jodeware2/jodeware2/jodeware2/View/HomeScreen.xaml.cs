@@ -13,15 +13,24 @@ namespace jodeware2.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeScreen : ContentPage
     {
+
+
+        Color background;
+
         public HomeScreen()
         {
+
             InitializeComponent();
+
 
             Title = "Startseite";
 
+            background = Color.DarkGray;
+
+
             logo = new Image { Source = "jodewarelogo.png" };
 
-
+            
             var imageSenderAdden = new Image { Source = "adden_colored.png" };
             imageSenderAdden.IsVisible = true;
 
@@ -31,8 +40,10 @@ namespace jodeware2.View
             var imageSenderStatistic = new Image { Source = "statistic_colored.png" };
             imageSenderStatistic.IsVisible = true;
 
-
             var imageSenderSettings = new Image { Source = "settings_colored.png" };
+            imageSenderSettings.IsVisible = true;
+
+            var imageSenderQR = new Image { Source = "qrcode.png" };
             imageSenderSettings.IsVisible = true;
 
             ScrollView scroll = new ScrollView();
@@ -70,7 +81,13 @@ namespace jodeware2.View
         async void coloredsettings(object sender, EventArgs e)
         {
 
-            await Navigation.PushModalAsync(new Bericht());
+            await Navigation.PushModalAsync(new Einstellungen());
         }
+
+        async void coloredqr(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new QRCodeGenerator());
+        }
+
     }
 }
