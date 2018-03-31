@@ -19,7 +19,6 @@ namespace jodeware2.Data
         {
             return restService.RefreshDataAsync();
         }
-        #endregion
 
         public Task SaveTaskAsync (Produkt produkt, bool isNewProdukt = false)
         {
