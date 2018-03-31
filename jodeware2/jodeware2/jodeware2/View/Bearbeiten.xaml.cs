@@ -1,4 +1,5 @@
-﻿using jodeware2.Models;
+﻿using jodeware2.Data;
+using jodeware2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace jodeware2.View
             Title = "Ware bearbeiten";
             produktlist.ItemsSource = ProduktListeTest.StringListe;
 
-            
+
+
         }
 
         async void home_Clicked(object sender, EventArgs e)
