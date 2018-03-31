@@ -28,7 +28,7 @@ namespace jodeware2.View
         {
             Produkt produkt = new Produkt();
             produkt.pro_bezeichnung = e_bezeichnung.Text;
-            produkt.pro_bild = null;
+            //produkt.pro_bild = null;
             produkt.pro_beschreibung = e_beschreibung.Text;
             produkt.hersteller_her_id = e_hersteller.Text;
             produkt.kategorie_kat_id = e_kategorie.Text;

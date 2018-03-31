@@ -15,7 +15,7 @@ namespace jodeware2.Data
             restService = service;
         }
 
-        public Task<List<Produkt>> GetTaskAsync()
+        public Task<RootObject> GetTaskAsync()
         {
             return restService.RefreshDataAsync();
         }
