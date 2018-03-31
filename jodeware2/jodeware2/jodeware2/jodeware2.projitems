@@ -38,8 +38,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProduktViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)View\Adden.xaml.cs">
-      <DependentUpon>Adden.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)View\ProduktAdden.xaml.cs">
+      <DependentUpon>ProduktAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Bericht.xaml.cs">
@@ -58,8 +58,8 @@
       <DependentUpon>LoginPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)View\Bearbeiten.xaml.cs">
-      <DependentUpon>Bearbeiten.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)View\ProduktBearbeiten.xaml.cs">
+      <DependentUpon>ProduktBearbeiten.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml.cs">
@@ -80,13 +80,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Bearbeiten.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ProduktBearbeiten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Adden.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ProduktAdden.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

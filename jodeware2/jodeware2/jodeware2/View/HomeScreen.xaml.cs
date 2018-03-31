@@ -31,8 +31,8 @@ namespace jodeware2.View
             logo = new Image { Source = "jodewarelogo.png" };
 
             
-            var imageSenderAdden = new Image { Source = "adden_colored.png" };
-            imageSenderAdden.IsVisible = true;
+            var imageSenderProduktProduktAdden = new Image { Source = "adden_colored.png" };
+            imageSenderProduktProduktAdden.IsVisible = true;
 
             var imageSenderEdit = new Image { Source = "edit_colored.png" };
             imageSenderEdit.IsVisible = true;
@@ -65,7 +65,7 @@ namespace jodeware2.View
 
         async void coloredadden(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Adden());
+            await Navigation.PushModalAsync(new ProduktAdden());
         }
 
         async void coloredbericht(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace jodeware2.View
 
         async void colorededit(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Bearbeiten());
+            await Navigation.PushModalAsync(new ProduktBearbeiten());
         }
 
         async void coloredsettings(object sender, EventArgs e)

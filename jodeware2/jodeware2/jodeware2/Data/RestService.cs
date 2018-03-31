@@ -30,7 +30,7 @@ namespace jodeware2.Data
         {
             Produkts = new RootObject();
 
-            var uri = new Uri(string.Format(Constants.RestRead, string.Empty));
+            var uri = new Uri(string.Format(Constants.ProduktRead, string.Empty));
 
             try
             {
@@ -49,7 +49,7 @@ namespace jodeware2.Data
 
         public async Task SaveProduktAsync(Produkt produkt, bool isNewProdukt = false)
         {
-            var uri = new Uri(string.Format(Constants.RestInsert, string.Empty));
+            var uri = new Uri(string.Format(Constants.ProduktInsert, string.Empty));
 
             try
             {
@@ -79,7 +79,7 @@ namespace jodeware2.Data
         //public async Task DeleteProduktAsync(string id)
         //{
 
-        //    var uri = new Uri(string.Format(Constants.RestDelete, id));
+        //    var uri = new Uri(string.Format(Constants.ProduktDelete, id));
         //    try
         //    {
         //        var response = await client.DeleteAsync(uri);
@@ -97,7 +97,7 @@ namespace jodeware2.Data
         public async Task DeleteProduktAsync(string id)
         {
 
-            var uri = new Uri(string.Format(Constants.RestDelete, string.Empty));
+            var uri = new Uri(string.Format(Constants.ProduktDelete, string.Empty));
             Produkt produkt = new Produkt();
             produkt.pro_id = id;
             try

@@ -12,12 +12,12 @@ using Xamarin.Forms.Xaml;
 namespace jodeware2.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Adden : ContentPage
+	public partial class ProduktAdden : ContentPage
 	{
         bool isNewProdukt;
 
 
-		public Adden ()
+		public ProduktAdden ()
 		{
 			InitializeComponent ();
             Title = "Ware hinzufügen";
@@ -47,7 +47,7 @@ namespace jodeware2.View
         {
             var imageSender = new Image { Source = "adden_colored.png" };
             imageSender.Aspect = Aspect.AspectFit;
-            await Navigation.PushModalAsync(new Adden());
+            await Navigation.PushModalAsync(new ProduktAdden());
         }
 
         async void coloredbericht(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace jodeware2.View
         {
             var imageSender = new Image { Source = "edit_colored.png" };
             imageSender.Aspect = Aspect.AspectFit;
-            await Navigation.PushModalAsync(new Bearbeiten());
+            await Navigation.PushModalAsync(new ProduktBearbeiten());
         }
 
         async void coloredsettings(object sender, EventArgs e)

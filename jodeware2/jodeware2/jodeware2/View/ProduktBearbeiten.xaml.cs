@@ -15,12 +15,12 @@ namespace jodeware2.View
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Bearbeiten : ContentPage
+	public partial class ProduktBearbeiten : ContentPage
 	{
         public RestService restService;
         bool isNewProdukt = false;
         private List<Produkt> produkts = null;
-        public Bearbeiten ()
+        public ProduktBearbeiten ()
 		{
             InitializeComponent();
             Title = "Ware bearbeiten";
@@ -65,7 +65,7 @@ namespace jodeware2.View
                                where prod.pro_id == pro.CommandParameter.ToString()
                                select prod).FirstOrDefault<Produkt>();
             await App.produktManager.DeleteTaskAsync(produkt);
-            await Navigation.PushModalAsync(new Bearbeiten());
+            await Navigation.PushModalAsync(new ProduktBearbeiten());
         }   
 
         async void save_Clicked(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace jodeware2.View
         {
             var imageSender = new Image { Source = "adden_colored.png" };
             imageSender.Aspect = Aspect.AspectFit;
-            await Navigation.PushModalAsync(new Adden());
+            await Navigation.PushModalAsync(new ProduktAdden());
         }
 
         async void coloredbericht(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace jodeware2.View
         {
             var imageSender = new Image { Source = "edit_colored.png" };
             imageSender.Aspect = Aspect.AspectFit;
-            await Navigation.PushModalAsync(new Bearbeiten());
+            await Navigation.PushModalAsync(new ProduktBearbeiten());
         }
 
         async void coloredsettings(object sender, EventArgs e)
