@@ -74,6 +74,10 @@
       <DependentUpon>ProduktBearbeiten.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\ProdEditView.xaml.cs">
+      <DependentUpon>ProdEditView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml.cs">
       <DependentUpon>QRCodeGenerator.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -170,6 +174,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\VerkaufAdden.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ProdEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>
