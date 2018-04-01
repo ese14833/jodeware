@@ -18,16 +18,17 @@
                                         <Label x:Name="l_besch" Text="{Binding pro_beschreibung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
                                         <Label x:Name="l_her" Text="{Binding hersteller_her_id, StringFormat=', Hersteller ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
                                         <Label x:Name="l_kat" Text="{Binding kategorie_kat_id, StringFormat=', Kategorie ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                        <Button Text="Delete" CommandParameter="{Binding pro_id}" Clicked="delete_Clicked" HorizontalOptions="Center" VerticalOptions="Center"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <!--<Button Text="Delete" CommandParameter="{Binding pro_id}" Clicked="delete_Clicked"/>-->
-                <Button x:Name="update" Text="Ändern" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Update_Clicked"/>
-                <Button x:Name="home" Text="Home" VerticalOptions="Center" HorizontalOptions="Center" Clicked="home_Clicked"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+                    <Button x:Name="update" Text="Ändern" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Update_Clicked"/>
+                    <Button x:Name="delete" Text="Delete" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="delete_Clicked"/>
+                    <Button x:Name="home" Text="Home" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked"/>
+                </StackLayout>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
@@ -49,9 +50,6 @@
                 </StackLayout>
 
             </StackLayout>
-
-
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

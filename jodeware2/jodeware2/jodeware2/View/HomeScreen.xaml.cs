@@ -84,12 +84,6 @@ namespace jodeware2.View
             await Navigation.PushModalAsync(new Einstellungen());
         }
 
-        //async void editing(object sender, EventArgs e)
-        //{
-
-        //    await Navigation.PushModalAsync(new ProduktAendern());
-        //}
-
         async void coloredqr(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new QRCodeGenerator());

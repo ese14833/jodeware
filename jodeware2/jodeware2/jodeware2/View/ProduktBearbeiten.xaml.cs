@@ -57,15 +57,15 @@ namespace jodeware2.View
             await Navigation.PushModalAsync(new HomeScreen());
         }
 
-        async void delete_Clicked(object sender, EventArgs e)
-        {
-            var pro = (Xamarin.Forms.Button)sender;
-            Produkt produkt = (from prod in produkts
-                               where prod.pro_id == pro.CommandParameter.ToString()
-                               select prod).FirstOrDefault<Produkt>();
-            await App.produktManager.DeleteTaskAsync(produkt);
-            await Navigation.PushModalAsync(new ProduktBearbeiten());
-        }   
+        //async void delete_Clicked(object sender, EventArgs e)
+        //{
+        //    var pro = (Xamarin.Forms.Button)sender;
+        //    Produkt produkt = (from prod in produkts
+        //                       where prod.pro_id == pro.CommandParameter.ToString()
+        //                       select prod).FirstOrDefault<Produkt>();
+        //    await App.produktManager.DeleteTaskAsync(produkt);
+        //    await Navigation.PushModalAsync(new ProduktBearbeiten());
+        //}   
 
         async void Save_Clicked(object sender, EventArgs e)
         {
@@ -107,6 +107,16 @@ namespace jodeware2.View
         {
             Produkt pro = (Produkt)produktlist.SelectedItem;
             await Navigation.PushModalAsync(new ProduktAendern(pro));
+        }
+
+        async void delete_Clicked(object sender, EventArgs e)
+        {
+            Produkt pro = (Produkt)produktlist.SelectedItem;
+            Produkt produkt = (from prod in produkts
+                               where prod.pro_id == pro.pro_id
+                               select prod).FirstOrDefault<Produkt>();
+            await App.produktManager.DeleteTaskAsync(produkt);
+            await Navigation.PushModalAsync(new ProduktBearbeiten());
         }
 
     }

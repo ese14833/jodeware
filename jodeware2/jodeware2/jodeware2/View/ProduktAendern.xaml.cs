@@ -29,18 +29,14 @@ namespace jodeware2.View
             produkt.pro_bezeichnung = e_bezeichnung.Text;
             produkt.pro_beschreibung = e_beschreibung.Text;
 
-            if (produkt != null && produkt.pro_bezeichnung != null && produkt.pro_bezeichnung != null)
+            if (produkt != null && !string.IsNullOrEmpty(produkt.pro_bezeichnung))
             {
                 await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
                 await DisplayAlert("Erfolgreich", "Produkt wurde geändert.", "Okay");
                 await Navigation.PushModalAsync(new HomeScreen());
             }
             else
-                await DisplayAlert("Fehler!", "Produkt konnte nicht geaddet werden.", "Okay");
-
-            /* Updaten */
-            /* Habe vorrübergehend einen Verlinkung auf die Startseite gemacht um den Fehler zu beheben. Da soll die Update Logik kommen */
-            /* oder keine Ahnung wo die Update Logik kommt, du bist der Master bei der Sache. xD */
+                await DisplayAlert("Fehler!", "Produkt konnte nicht geändert werden.", "Okay");
         }
 
         async void Home_Clicked(object sender, EventArgs e)

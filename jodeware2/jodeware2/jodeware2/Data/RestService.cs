@@ -60,23 +60,38 @@ namespace jodeware2.Data
             }
             if (ob is Kategorie)
             {
-                uri = new Uri(string.Format(Constants.KategorieInsert, string.Empty));
+                if (isNewProdukt)
+                    uri = new Uri(string.Format(Constants.KategorieInsert, string.Empty));
+                else
+                    uri = new Uri(string.Format(Constants.KategorieUpdate, string.Empty));
             }
             if (ob is Hersteller)
             {
-                uri = new Uri(string.Format(Constants.HerstellerInsert, string.Empty));
+                if (isNewProdukt)
+                    uri = new Uri(string.Format(Constants.HerstellerInsert, string.Empty));
+                else
+                    uri = new Uri(string.Format(Constants.HerstellerUpdate, string.Empty));
             }
             if(ob is Regal)
             {
-                uri = new Uri(string.Format(Constants.RegalInsert, string.Empty));
+                if (isNewProdukt)
+                    uri = new Uri(string.Format(Constants.RegalInsert, string.Empty));
+                else
+                    uri = new Uri(string.Format(Constants.RegalUpdate, string.Empty));
             }
             if (ob is Lagerbestand)
             {
-                uri = new Uri(string.Format(Constants.LagerbestandInsert, string.Empty));
+                if (isNewProdukt)
+                    uri = new Uri(string.Format(Constants.LagerbestandInsert, string.Empty));
+                else
+                    uri = new Uri(string.Format(Constants.LagerbestandUpdate, string.Empty));
             }
             if (ob is Verkauf)
             {
-                uri = new Uri(string.Format(Constants.VerkaufInsert, string.Empty));
+                if (isNewProdukt)
+                    uri = new Uri(string.Format(Constants.VerkaufInsert, string.Empty));
+                else
+                    uri = new Uri(string.Format(Constants.VerkaufUpdate, string.Empty));
             }
 
             try
