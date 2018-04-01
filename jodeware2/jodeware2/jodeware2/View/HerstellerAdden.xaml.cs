@@ -36,5 +36,10 @@ namespace jodeware2.View
             else
                 await DisplayAlert("Fehler!", "Hersteller konnte nicht geaddet werden.", "Okay");
         }
+
+        async void Btn_home(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new HomeScreen());
+        }
     }
 }

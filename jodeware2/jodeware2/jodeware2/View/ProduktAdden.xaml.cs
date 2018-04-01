@@ -101,5 +101,10 @@ namespace jodeware2.View
             await DisplayAlert("Foto", "Demnächst kommt die vollständige Funktionalität", "Okay");
         }
 
+        async void Btn_home(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new HomeScreen());
+        }
+
     }
 }

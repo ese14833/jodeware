@@ -31,7 +31,9 @@
                 <Button x:Name="b_kamera" Text="Produktfoto"  BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="Btn_kamera"/>
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
 
-        </StackLayout>
+                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home"/>
+
+            </StackLayout>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="End">
 
