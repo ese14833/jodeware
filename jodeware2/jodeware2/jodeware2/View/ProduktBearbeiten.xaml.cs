@@ -35,7 +35,6 @@ namespace jodeware2.View
             rootObject = await restService.RefreshDataAsync();
             produktlist.ItemsSource = rootObject.produkt;
             produkts = rootObject.produkt;
-
         }
 
         private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
@@ -68,7 +67,7 @@ namespace jodeware2.View
             await Navigation.PushModalAsync(new ProduktBearbeiten());
         }   
 
-        async void save_Clicked(object sender, EventArgs e)
+        async void Save_Clicked(object sender, EventArgs e)
         {
             var todoItem = (Produkt)BindingContext;
             await App.produktManager.SaveTaskAsync(todoItem, isNewProdukt);
@@ -102,6 +101,12 @@ namespace jodeware2.View
             var imageSender = new Image { Source = "settings_colored.png" };
             imageSender.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(new Bericht());
+        }
+
+        async void Update_Clicked(object sender, EventArgs e)
+        {
+            Produkt pro = (Produkt)produktlist.SelectedItem;
+            await Navigation.PushModalAsync(new ProduktAendern(pro));
         }
 
     }

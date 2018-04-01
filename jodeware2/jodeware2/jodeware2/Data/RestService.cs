@@ -53,7 +53,10 @@ namespace jodeware2.Data
 
             if (ob is Produkt)
             {
-                uri = new Uri(string.Format(Constants.ProduktInsert, string.Empty));
+                if (isNewProdukt)
+                    uri = new Uri(string.Format(Constants.ProduktInsert, string.Empty));
+                else
+                    uri = new Uri(string.Format(Constants.ProduktUpdate, string.Empty));
             }
             if (ob is Kategorie)
             {

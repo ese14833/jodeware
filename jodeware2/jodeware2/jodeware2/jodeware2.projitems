@@ -70,12 +70,12 @@
       <DependentUpon>LoginPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)View\ProduktBearbeiten.xaml.cs">
-      <DependentUpon>ProduktBearbeiten.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)View\ProduktAendern.xaml.cs">
+      <DependentUpon>ProduktAendern.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)View\ProdEditView.xaml.cs">
-      <DependentUpon>ProdEditView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)View\ProduktBearbeiten.xaml.cs">
+      <DependentUpon>ProduktBearbeiten.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\QRCodeGenerator.xaml.cs">
@@ -177,9 +177,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ProdEditView.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ProduktAendern.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -33,9 +33,9 @@
                         <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <!--<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <Button Text="Produkte bearbeiten Seite" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="editing"/>
-                    </StackLayout>
+                    </StackLayout>-->
 
                 </StackLayout>
 

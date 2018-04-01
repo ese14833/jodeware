@@ -26,6 +26,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <!--<Button Text="Delete" CommandParameter="{Binding pro_id}" Clicked="delete_Clicked"/>-->
+                <Button x:Name="update" Text="Ändern" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Update_Clicked"/>
                 <Button x:Name="home" Text="Home" VerticalOptions="Center" HorizontalOptions="Center" Clicked="home_Clicked"/>
             </StackLayout>
 
