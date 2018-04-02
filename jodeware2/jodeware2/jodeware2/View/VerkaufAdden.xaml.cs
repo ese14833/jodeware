@@ -83,5 +83,10 @@ namespace jodeware2.View
                 proBez = picker_pro.Items[picker_pro.SelectedIndex];
             }
         }
+
+        private void picker_reg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

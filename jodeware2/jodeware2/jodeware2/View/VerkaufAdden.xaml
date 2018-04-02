@@ -12,6 +12,9 @@
                 <Label x:Name="l_produkt" Text="Produkt:" Font="Calibri"/>
                 <Picker x:Name="picker_pro" SelectedIndexChanged="picker_pro_SelectedIndexChanged"/>
 
+                <Label x:Name="l_regal" Text="Regal:" Font="Calibri"/>
+                <Picker x:Name="picker_reg" SelectedIndexChanged="picker_reg_SelectedIndexChanged"/>
+
                 <Label x:Name="l_ver_menge" Text="Menge:" Font="Calibri"/>
                 <Entry x:Name="e_ver_menge" Text="{Binding Path=ver_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
 

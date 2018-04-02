@@ -6,14 +6,14 @@
         <StackLayout>
             <StackLayout Margin="20" Padding="10">
 
-                <Label x:Name="l_lager_id" Text="ID:" Font="Calibri"/>
-                <Entry x:Name="e_lager_id" Text="{Binding Path=lag_id}" Placeholder="ID des Lagerbestands" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+                <!--<Label x:Name="l_lager_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_lager_id" Text="{Binding Path=lag_id}" Placeholder="ID des Lagerbestands" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
 
-                <Label x:Name="l_lager_pro" Text="Produkt:" Font="Calibri"/>
-                <Entry x:Name="e_lager_pro" Text="{Binding Path=produkt_pro_id}" Placeholder="Produkt" BackgroundColor="WhiteSmoke"/>
+                <Label x:Name="l_produkt" Text="Produkt:" Font="Calibri"/>
+                <Picker x:Name="picker_pro" SelectedIndexChanged="picker_pro_SelectedIndexChanged"/>
 
-                <Label x:Name="l_lager_reg" Text="Regal:" Font="Calibri"/>
-                <Entry x:Name="e_lager_reg" Text="{Binding Path=regal_reg_id}" Placeholder="Regal" BackgroundColor="WhiteSmoke"/>
+                <Label x:Name="l_regal" Text="Regal:" Font="Calibri"/>
+                <Picker x:Name="picker_reg" SelectedIndexChanged="picker_reg_SelectedIndexChanged"/>
 
                 <Label x:Name="l_lager_preis" Text="Preis:" Font="Calibri"/>
                 <Entry x:Name="e_lager_preis" Text="{Binding Path=lag_preis}" Placeholder="Preis" BackgroundColor="WhiteSmoke"/>

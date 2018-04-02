@@ -15,8 +15,9 @@ namespace jodeware2.Data
         HttpClient client;
         //string grant_type = "password";
         public RootObject Produkts { get; set; }
-        public RootObjectKat Kategoriess { get; set; }
+        public RootObjectKat Kategories { get; set; }
         public RootObjectHer Herstellers { get; set; }
+        public RootObjectReg Regals { get; set; }
 
         public RestService()
         {
@@ -51,7 +52,7 @@ namespace jodeware2.Data
 
         public async Task<RootObjectKat> RefreshKategorieAsync()
         {
-            Kategoriess = new RootObjectKat();
+            Kategories = new RootObjectKat();
 
             var uri = new Uri(string.Format(Constants.KategorieRead, string.Empty));
 
@@ -61,14 +62,36 @@ namespace jodeware2.Data
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    Kategoriess = JsonConvert.DeserializeObject<RootObjectKat>(content);
+                    Kategories = JsonConvert.DeserializeObject<RootObjectKat>(content);
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
-            return Kategoriess;
+            return Kategories;
+        }
+
+        public async Task<RootObjectReg> RefreshRegalAsync()
+        {
+            Regals = new RootObjectReg();
+
+            var uri = new Uri(string.Format(Constants.KategorieRead, string.Empty));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Regals = JsonConvert.DeserializeObject<RootObjectReg>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return Regals;
         }
 
         public async Task<RootObjectHer> RefreshHerstellerAsync()

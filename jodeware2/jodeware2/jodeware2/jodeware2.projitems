@@ -35,6 +35,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectHer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectKat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectReg.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Verkauf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
