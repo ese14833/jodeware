@@ -6,11 +6,11 @@
         <StackLayout>
             <StackLayout Margin="20" Padding="10">
 
-                <Label x:Name="l_ver_id" Text="ID:" Font="Calibri"/>
-                <Entry x:Name="e_ver_id" Text="{Binding Path=ver_id}" Placeholder="ID des Regals" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
+                <!--<Label x:Name="l_ver_id" Text="ID:" Font="Calibri"/>
+                <Entry x:Name="e_ver_id" Text="{Binding Path=ver_id}" Placeholder="ID des Regals" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
 
-                <Label x:Name="l_ver_pro" Text="Produkt:" Font="Calibri"/>
-                <Entry x:Name="e_ver_pro" Text="{Binding Path=produkt_pro_id}" Placeholder="Produkt" BackgroundColor="WhiteSmoke"/>
+                <Label x:Name="l_produkt" Text="Produkt:" Font="Calibri"/>
+                <Picker x:Name="picker_pro" SelectedIndexChanged="picker_pro_SelectedIndexChanged"/>
 
                 <Label x:Name="l_ver_menge" Text="Menge:" Font="Calibri"/>
                 <Entry x:Name="e_ver_menge" Text="{Binding Path=ver_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
