@@ -69,37 +69,6 @@ namespace jodeware2.View
             await Navigation.PushModalAsync(new Bericht());
         }
 
-        /*async void Btn_kamera(object sender, EventArgs e)
-        {
-            await CrossMedia.Current.Initialize();
-            if(!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-            {
-                await DisplayAlert("Keine Kamera gefunden", "Bitte aktivieren Sie Ihren Kamera!", "Okay");
-                return;
-            }
-
-            var file = await CrossMedia.Current.TakePhotoAsync(
-                new Plugin.Media.Abstractions.StoreCameraMediaOptions
-                {
-                    SaveToAlbum = true,
-                });
-
-            if(file == null)
-            {
-                return;
-            }
-
-            MainImage.S
-        }*/
-
-
-
-
-        /* Vorrübergehend */
-        async void Btn_kamera(object sender, EventArgs e)
-        {
-            await DisplayAlert("Foto", "Demnächst kommt die vollständige Funktionalität", "Okay");
-        }
 
         async void Btn_home(object sender, EventArgs e)
         {

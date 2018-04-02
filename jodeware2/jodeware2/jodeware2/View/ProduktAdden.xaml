@@ -27,8 +27,7 @@
                 
                 <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
                 <Entry x:Name="e_location" Text="{Binding Path=pro_beschreibung}" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>-->
-
-                <Button x:Name="b_kamera" Text="Produktfoto"  BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="Btn_kamera"/>
+                
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
 
                 <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home"/>
