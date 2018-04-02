@@ -51,7 +51,10 @@ namespace jodeware2.Models
         public static string VerkaufUpdate = "https://test.jodeware.com/api/verkauf/updateVerkauf.php";
         public static string VerkaufDelete = "https://test.jodeware.com/api/verkauf/deleteVerkauf.php";
 
-        public static string BerichtRead = "https://test.jodeware.com/api/bericht/readBericht.php";
+        // REST: Bericht URLs
+        public static string BerichtReadW = "https://test.jodeware.com/api/bericht/readBerichtW.php";
+        public static string BerichtReadM = "https://test.jodeware.com/api/bericht/readBerichtM.php";
+        public static string BerichtReadY = "https://test.jodeware.com/api/bericht/readBerichtY.php";
 
         // Credentials that are hard coded into the REST service
         public static string Username = "test";

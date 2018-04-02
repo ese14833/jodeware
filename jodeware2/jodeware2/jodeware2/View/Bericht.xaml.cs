@@ -22,7 +22,8 @@ namespace jodeware2.View
         {
             InitializeComponent();
             this.Title = "Berichte";
-            GetJSON();
+            ListviewSetup();
+            //GetJSON();
         }
 
         /*private void Suche_nachEingabe(object sender, TextChangedEventArgs e)
@@ -37,37 +38,43 @@ namespace jodeware2.View
             lstView.EndRefresh();
         }*/
 
-        public async void GetJSON()
+        public void ListviewSetup()
         {
-            restService = new RestService();
-            RootObject rootObject = new RootObject();
-            lstView.RowHeight = 60;
-            rootObject = await restService.RefreshDataAsync();
-            lstView.ItemsSource = rootObject.produkt;
-
+            lstView.RowHeight = 85;
         }
         async void Menu_Clicked(Object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());
         }
 
-        async void Gestern_Clicked(object sender, EventArgs e)
+        async void Woche_Clicked(object sender, EventArgs e)
         {
+            lstView.BeginRefresh();
             restService = new RestService();
-            RootObjectBer rootObjectBer = new RootObjectBer();
-            lstView.RowHeight = 60;
-            rootObjectBer = await restService.GetBerichtAsync();
-            lstView.ItemsSource = rootObjectBer.bericht;
+            RootObjectBer objectBer = new RootObjectBer();
+            objectBer = await restService.RefreshBerichtAsync("week");
+            lstView.ItemsSource = objectBer.bericht;
+            lstView.EndRefresh();
         }
 
-        private void Woche_Clicked(object sender, EventArgs e)
+        async void Monat_Clicked(object sender, EventArgs e)
         {
-
+            lstView.BeginRefresh();
+            restService = new RestService();
+            RootObjectBer objectBer = new RootObjectBer();
+            objectBer = await restService.RefreshBerichtAsync("month");
+            lstView.ItemsSource = objectBer.bericht;
+            lstView.EndRefresh();
         }
 
-        private void Monat_Clicked(object sender, EventArgs e)
+        async void Jahr_Clicked(object sender, EventArgs e)
         {
-
+            lstView.BeginRefresh();
+            restService = new RestService();
+            RootObjectBer objectBer = new RootObjectBer();
+            objectBer = await restService.RefreshBerichtAsync("year");
+            lstView.ItemsSource = objectBer.bericht;
+            lstView.EndRefresh();
         }
 
 

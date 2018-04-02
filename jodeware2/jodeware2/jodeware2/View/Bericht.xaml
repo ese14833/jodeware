@@ -10,17 +10,16 @@
 
             <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
 
-            <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default">
+            <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default" Header="Berichte">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Margin="20,20,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding pro_id}" BackgroundColor="Transparent" FontSize="19" FontFamily="Calibri"/>
-                                    <Label Text="{Binding pro_bezeichnung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                    <Label Text="{Binding pro_beschreibung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                    <Label Text="{Binding hersteller_her_id, StringFormat=', Hersteller ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                    <Label Text="{Binding kategorie_kat_id, StringFormat=', Kategorie ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding Bezeichnung}" BackgroundColor="Transparent" FontSize="19" FontFamily="Calibri"/>
+                                    <Label Text="{Binding VerkaufteMenge, StringFormat='{}{0:C} Stück'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding Umsatz, StringFormat='{}{0:C}€'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding GesamtUmsatz, StringFormat='{}{0:C}€'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -29,12 +28,11 @@
             </ListView>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
-                <Button Text="Gestern" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Gestern_Clicked"/>
-                <Button Text="Letzte Woche" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Woche_Clicked"/>
-                <Button Text="Letzter Monat" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Clicked="Monat_Clicked"/>
+                <Button Text="Letzte Woche" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Woche_Clicked"/>
+                <Button Text="Letzter Monat" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Monat_Clicked"/>
+                <Button Text="Letztes Jahr" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Jahr_Clicked"/>
+                <Button Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Menu_Clicked"/>
             </StackLayout>
-
-            <Button Text="Hauptmenü" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Menu_Clicked"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 

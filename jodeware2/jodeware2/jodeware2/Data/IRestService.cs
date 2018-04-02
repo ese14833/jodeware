@@ -12,6 +12,7 @@ namespace jodeware2.Data
         Task<RootObjectKat> RefreshKategorieAsync();
         Task<RootObjectHer> RefreshHerstellerAsync();
         Task<RootObjectReg> RefreshRegalAsync();
+        Task<RootObjectBer> RefreshBerichtAsync(string time);
         Task SaveAsync(Object ob, bool isNewProdukt);
         Task DeleteProduktAsync(string id); 
         Task DeleteKategorieAsync(string id);

@@ -117,6 +117,40 @@ namespace jodeware2.Data
             return Herstellers;
         }
 
+        public async Task<RootObjectBer> RefreshBerichtAsync(string time)
+        {
+            Uri uri = null;
+            Berichts = new RootObjectBer();
+
+            if (time == "week")
+            {
+                uri = new Uri(string.Format(Constants.BerichtReadW, string.Empty));
+            }
+            if (time == "month")
+            {
+                uri = new Uri(string.Format(Constants.BerichtReadM, string.Empty));
+            }
+            if (time == "year")
+            {
+                uri = new Uri(string.Format(Constants.BerichtReadY, string.Empty));
+            }
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Berichts = JsonConvert.DeserializeObject<RootObjectBer>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return Berichts;
+        }
+
+
         public async Task SaveAsync(Object ob, bool isNewProdukt = false)
         {
             Uri uri = null;
@@ -317,28 +351,6 @@ namespace jodeware2.Data
             {
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
-        }
-
-        public async Task<RootObjectBer> GetBerichtAsync()
-        {
-            Berichts = new RootObjectBer();
-
-            var uri = new Uri(string.Format(Constants.BerichtRead, "&params=2018-02-02\\2018-04-02"));
-
-            try
-            {
-                var response = await client.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    Berichts = JsonConvert.DeserializeObject<RootObjectBer>(content);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(@"				ERROR {0}", ex.Message);
-            }
-            return Berichts;
         }
     }
 }
