@@ -26,8 +26,8 @@
                 </ListView>
                 <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
                     <Button x:Name="update" Text="Ändern" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Update_Clicked"/>
-                    <Button x:Name="delete" Text="Delete" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="delete_Clicked"/>
-                    <Button x:Name="home" Text="Home" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked"/>
+                    <Button x:Name="delete" Text="Löschen" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="delete_Clicked"/>
+                    <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked"/>
                 </StackLayout>
             </StackLayout>
 

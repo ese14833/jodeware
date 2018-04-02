@@ -15,6 +15,8 @@ namespace jodeware2.Data
         HttpClient client;
         //string grant_type = "password";
         public RootObject Produkts { get; set; }
+        public RootObjectKat Kategoriess { get; set; }
+        public RootObjectHer Herstellers { get; set; }
 
         public RestService()
         {
@@ -45,6 +47,50 @@ namespace jodeware2.Data
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
             return Produkts;
+        }
+
+        public async Task<RootObjectKat> RefreshKategorieAsync()
+        {
+            Kategoriess = new RootObjectKat();
+
+            var uri = new Uri(string.Format(Constants.KategorieRead, string.Empty));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Kategoriess = JsonConvert.DeserializeObject<RootObjectKat>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return Kategoriess;
+        }
+
+        public async Task<RootObjectHer> RefreshHerstellerAsync()
+        {
+            Herstellers = new RootObjectHer();
+
+            var uri = new Uri(string.Format(Constants.HerstellerRead, string.Empty));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Herstellers = JsonConvert.DeserializeObject<RootObjectHer>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return Herstellers;
         }
 
         public async Task SaveAsync(Object ob, bool isNewProdukt = false)

@@ -4,9 +4,8 @@ using System.Text;
 
 namespace jodeware2.Models
 {
-    public class RootObject
+    public class RootObjectHer
     {
-
-        public List<Produkt> produkt { get; set; }
+        public List<Hersteller> hersteller { get; set; }
     }
 }
