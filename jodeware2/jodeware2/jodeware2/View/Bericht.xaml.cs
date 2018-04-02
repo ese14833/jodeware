@@ -51,9 +51,13 @@ namespace jodeware2.View
             await Navigation.PushModalAsync(new HomeScreen());
         }
 
-        private void Gestern_Clicked(object sender, EventArgs e)
+        async void Gestern_Clicked(object sender, EventArgs e)
         {
-
+            restService = new RestService();
+            RootObjectBer rootObjectBer = new RootObjectBer();
+            lstView.RowHeight = 60;
+            rootObjectBer = await restService.GetBerichtAsync();
+            lstView.ItemsSource = rootObjectBer.bericht;
         }
 
         private void Woche_Clicked(object sender, EventArgs e)

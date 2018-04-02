@@ -25,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Bericht.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Hersteller.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Kategorie.cs" />
@@ -33,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProduktListeTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Regal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectBer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectHer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectKat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectReg.cs" />
