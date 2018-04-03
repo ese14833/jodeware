@@ -8,7 +8,12 @@
     <ContentPage.Content>
         <StackLayout Padding="20" Margin="10">
 
-            <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default" Header="Berichte">
+            <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default">
+                <ListView.Header>
+                    <StackLayout Padding="10,5,0,5" BackgroundColor="#cccccc">
+                        <Label Text="Berichte" FontAttributes="Bold" />
+                    </StackLayout>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
