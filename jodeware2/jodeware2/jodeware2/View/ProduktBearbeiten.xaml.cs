@@ -2,6 +2,7 @@
 using jodeware2.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,15 +42,22 @@ namespace jodeware2.View
         {
             produktlist.BeginRefresh();
 
-            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+            try
             {
-                GetData();
+                if (string.IsNullOrWhiteSpace(e.NewTextValue))
+                {
+                    GetData();
+                }
+                else
+                {
+                    produktlist.ItemsSource = produkts.Where(i => i.pro_bezeichnung.Contains(e.NewTextValue));
+                }
+                produktlist.EndRefresh();
             }
-            else
+            catch (Exception ex)
             {
-                produktlist.ItemsSource = produkts.Where(i => i.pro_bezeichnung.Contains(e.NewTextValue));
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
-            produktlist.EndRefresh();
         }
 
         async void home_Clicked(object sender, EventArgs e)
