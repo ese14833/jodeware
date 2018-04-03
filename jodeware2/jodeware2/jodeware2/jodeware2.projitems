@@ -55,6 +55,10 @@
       <DependentUpon>LagerbestandAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Lagerverwalten.xaml.cs">
+      <DependentUpon>Lagerverwalten.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\ProduktAdden.xaml.cs">
       <DependentUpon>ProduktAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -123,9 +127,16 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)adden_colored.png" />
     <Content Include="$(MSBuildThisFileDirectory)edit_colored.png" />
+    <Content Include="$(MSBuildThisFileDirectory)home.png" />
+    <Content Include="$(MSBuildThisFileDirectory)insert.png" />
     <Content Include="$(MSBuildThisFileDirectory)jodewarelogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)lagerverwaltung.png" />
+    <Content Include="$(MSBuildThisFileDirectory)miniadden.png" />
+    <Content Include="$(MSBuildThisFileDirectory)minidelete.png" />
+    <Content Include="$(MSBuildThisFileDirectory)minisave.png" />
+    <Content Include="$(MSBuildThisFileDirectory)miniupdate.png" />
     <Content Include="$(MSBuildThisFileDirectory)qrcode.png" />
     <Content Include="$(MSBuildThisFileDirectory)settings_colored.png" />
     <Content Include="$(MSBuildThisFileDirectory)statistic_colored.png" />
@@ -183,6 +194,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ProduktAendern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Lagerverwalten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

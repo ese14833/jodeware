@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.Lagerverwalten">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Margin="10">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="insert.png" Clicked="HerstellerAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Hersteller hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="insert.png" Clicked="HerstellerAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Kategorie hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="insert.png" Clicked="HerstellerAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Regal hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="insert.png" Clicked="LagerbestandAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Lagerbestand hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="insert.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Verkauf hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="VerkaufAdden_Clicked"/>
+                </StackLayout>
+               
+            </StackLayout>
+
+                <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked" Image="home.png"/>
+            
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

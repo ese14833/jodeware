@@ -89,29 +89,9 @@ namespace jodeware2.View
             await Navigation.PushModalAsync(new QRCodeGenerator());
         }
 
-        async void HerstellerAdden_Clicked(object sender, EventArgs e)
+        async void Lagerverwalten_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new HerstellerAdden());
-        }
-
-        async void KategorieAdden_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new KategorieAdden());
-        }
-
-        async void RegalAdden_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new RegalAdden());
-        }
-
-        async void LagerbestandAdden_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new LagerbestandAdden());
-        }
-
-        async void VerkaufAdden_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new VerkaufAdden());
+            await Navigation.PushModalAsync(new Lagerverwalten());
         }
     }
 }

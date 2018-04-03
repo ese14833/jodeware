@@ -8,8 +8,6 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <SearchBar x:Name="suche" Placeholder="Suche nach Produkten"/>
-
             <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default" Header="Berichte">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -28,9 +26,9 @@
             </ListView>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
-                <Button Text="Letzte Woche" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Woche_Clicked"/>
-                <Button Text="Letzter Monat" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Monat_Clicked"/>
-                <Button Text="Letztes Jahr" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Jahr_Clicked"/>
+                <Button Text="Letzte Woche" BorderColor="Black" BorderRadius="2" BackgroundColor="Orange" VerticalOptions="Center" Clicked="Woche_Clicked"/>
+                <Button Text="Letzter Monat" BorderColor="Black" BorderRadius="2" BackgroundColor="OrangeRed" VerticalOptions="Center" Clicked="Monat_Clicked"/>
+                <Button Text="Letztes Jahr" BorderColor="Black" BorderRadius="2" BackgroundColor="Red" VerticalOptions="Center" Clicked="Jahr_Clicked"/>
                 <Button Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Menu_Clicked"/>
             </StackLayout>
 

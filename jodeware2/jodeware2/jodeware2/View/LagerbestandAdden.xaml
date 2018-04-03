@@ -24,10 +24,10 @@
                 <Label x:Name="l_lager_res" Text="Reservierte Menge:" Font="Calibri"/>
                 <Entry x:Name="e_lager_res" Text="{Binding Path=lag_res_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
 
-                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen"/>
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" Image="miniadden.png" />
 
 
-                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home"/>
+                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" Image="home.png"/>
 
             </StackLayout>
         </StackLayout>

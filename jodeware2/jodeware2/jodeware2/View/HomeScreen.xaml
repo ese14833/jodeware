@@ -13,6 +13,7 @@
                 <Image x:Name="logo" Source = "jodewarelogo.png"/>
 
 
+              
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
@@ -21,71 +22,6 @@
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <Button Text="Ware hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredadden"/>
-                    </StackLayout>
-
-                </StackLayout>
-
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Hersteller hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
-                    </StackLayout>
-
-                </StackLayout>
-                
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Kategorie hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieAdden_Clicked"/>
-                    </StackLayout>
-
-                </StackLayout>
-                
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Regal hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="RegalAdden_Clicked"/>
-                    </StackLayout>
-
-                </StackLayout>
-                
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Lagerbestand hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
-                    </StackLayout>
-
-                </StackLayout>
-                
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Verkauf hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="VerkaufAdden_Clicked"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -103,6 +39,17 @@
 
                 </StackLayout>
 
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                        <Button BorderRadius="3" Image="lagerverwaltung.png" Clicked="Lagerverwalten_Clicked" BackgroundColor="WhiteSmoke"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Button Text="Weitere Lagerverwaltungen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="Lagerverwalten_Clicked"/>
+                    </StackLayout>
+
+                </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
@@ -119,7 +66,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="settings_colored.png" Clicked="colorededit" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="3" Image="settings_colored.png" Clicked="coloredsettings" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
@@ -127,8 +74,6 @@
                     </StackLayout>
 
                 </StackLayout>
-
-
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
@@ -141,7 +86,6 @@
                     </StackLayout>
 
                 </StackLayout>
-
 
                 <Button Text="Logout" Clicked="LogOut_Clicked" BorderColor="Black"/>
             </StackLayout>
