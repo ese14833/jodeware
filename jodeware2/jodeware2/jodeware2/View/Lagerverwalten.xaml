@@ -25,7 +25,7 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Kategorie hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
+                    <Button Text="Kategorie hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -38,7 +38,7 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Regal hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
+                    <Button Text="Regal hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="RegalAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
