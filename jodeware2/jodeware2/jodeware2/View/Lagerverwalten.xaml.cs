@@ -48,5 +48,20 @@ namespace jodeware2.View
         {
             await Navigation.PushModalAsync(new VerkaufAdden());
         }
+
+        async void KategorieShow_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new KategorieShow());
+        }
+
+        async void HerstellerShow_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new HerstellerShow());
+        }
+
+        async void LagerbestandEdit_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LagerbestandEdit());
+        }
     }
 }

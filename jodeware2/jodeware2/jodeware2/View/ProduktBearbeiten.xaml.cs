@@ -24,10 +24,10 @@ namespace jodeware2.View
 		{
             InitializeComponent();
             Title = "Ware bearbeiten";
-            GetJSON();
+            GetData();
         }
 
-        public async void GetJSON()
+        public async void GetData()
         {
             restService = new RestService();
             RootObject rootObject = new RootObject();
@@ -43,7 +43,7 @@ namespace jodeware2.View
 
             if (string.IsNullOrWhiteSpace(e.NewTextValue))
             {
-                GetJSON();
+                GetData();
             }
             else
             {
@@ -55,17 +55,7 @@ namespace jodeware2.View
         async void home_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HomeScreen());
-        }
-
-        //async void delete_Clicked(object sender, EventArgs e)
-        //{
-        //    var pro = (Xamarin.Forms.Button)sender;
-        //    Produkt produkt = (from prod in produkts
-        //                       where prod.pro_id == pro.CommandParameter.ToString()
-        //                       select prod).FirstOrDefault<Produkt>();
-        //    await App.produktManager.DeleteTaskAsync(produkt);
-        //    await Navigation.PushModalAsync(new ProduktBearbeiten());
-        //}   
+        } 
 
         async void Save_Clicked(object sender, EventArgs e)
         {
