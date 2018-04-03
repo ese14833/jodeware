@@ -15,6 +15,7 @@ namespace jodeware2.View
 		public Lagerverwalten ()
 		{
 			InitializeComponent ();
+            ScrollView scroll = new ScrollView();
         }
 
         async void home_Clicked(object sender, EventArgs e)

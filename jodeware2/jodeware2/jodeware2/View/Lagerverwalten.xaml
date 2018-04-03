@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.Lagerverwalten">
     <ContentPage.Content>
-        <StackLayout Padding="20" Margin="10">
+        <ScrollView x:Name="scroll" Orientation="Vertical">
+            <StackLayout Padding="20" Margin="10">
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
@@ -71,5 +72,6 @@
                 <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked" Image="home.png"/>
             
             </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
