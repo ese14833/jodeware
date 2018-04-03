@@ -55,6 +55,19 @@
                 </StackLayout>
 
             </StackLayout>
+                
+                
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="edit_colored.png" Clicked="LagerbestandEdit_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Button Text="Lagerbestand bearbeiten" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
 
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
@@ -68,6 +81,47 @@
                 </StackLayout>
                
             </StackLayout>
+                
+                
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                    <Button BorderRadius="3" Image="edit_colored.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Kategorien anzeigen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieShow_Clicked"/>
+                </StackLayout>
+               
+            </StackLayout>    
+                
+                
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                        <Button BorderRadius="3" Image="edit_colored.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Button Text="Hersteller anzeigen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerShow_Clicked"/>
+                </StackLayout>
+               
+            </StackLayout>    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 
                 <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked" Image="home.png"/>
             

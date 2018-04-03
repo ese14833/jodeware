@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jodeware2.View.HerstellerShow">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20" Padding="10">
+                <!--<SearchBar x:Name="suche" Placeholder="Suche nach Kategorien" TextChanged="SearchBar_OnTextChanged"/>-->
+                <ListView x:Name="herstellerList" RowHeight="40" SeparatorVisibility="Default">
+                    <ListView.Header>
+                        <StackLayout Padding="10,5,0,5" BackgroundColor="#cccccc">
+                            <Label Text="Hersteller" FontAttributes="Bold" />
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="20,20,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label x:Name="h_id" Text="{Binding her_id}" BackgroundColor="Transparent" FontSize="19" FontFamily="Calibri"/>
+                                        <Label x:Name="h_bez" Text="{Binding her_bezeichnung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked" Image="home.png"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

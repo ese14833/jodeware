@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectBer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectHer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectKat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectLag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectReg.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Verkauf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktRepository.cs" />
@@ -47,12 +48,24 @@
       <DependentUpon>HerstellerAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\HerstellerShow.xaml.cs">
+      <DependentUpon>HerstellerShow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\KategorieAdden.xaml.cs">
       <DependentUpon>KategorieAdden.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\KategorieShow.xaml.cs">
+      <DependentUpon>KategorieShow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\LagerbestandAdden.xaml.cs">
       <DependentUpon>LagerbestandAdden.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\LagerbestandEdit.xaml.cs">
+      <DependentUpon>LagerbestandEdit.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Lagerverwalten.xaml.cs">
@@ -200,6 +213,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Lagerverwalten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\KategorieShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\HerstellerShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\LagerbestandEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

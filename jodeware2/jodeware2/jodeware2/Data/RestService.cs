@@ -19,6 +19,7 @@ namespace jodeware2.Data
         public RootObjectHer Herstellers { get; set; }
         public RootObjectReg Regals { get; set; }
         public RootObjectBer Berichts { get; set; }
+        public RootObjectLag Lagers { get; set; }
 
         public RestService()
         {
@@ -117,6 +118,28 @@ namespace jodeware2.Data
             return Herstellers;
         }
 
+        public async Task<RootObjectLag> RefreshLagerbestandAsync()
+        {
+            Lagers = new RootObjectLag();
+
+            var uri = new Uri(string.Format(Constants.LagerbestandRead, string.Empty));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Lagers = JsonConvert.DeserializeObject<RootObjectLag>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return Lagers;
+        }
+
         public async Task<RootObjectBer> RefreshBerichtAsync(string time)
         {
             Uri uri = null;
@@ -149,7 +172,6 @@ namespace jodeware2.Data
             }
             return Berichts;
         }
-
 
         public async Task SaveAsync(Object ob, bool isNewProdukt = false)
         {
