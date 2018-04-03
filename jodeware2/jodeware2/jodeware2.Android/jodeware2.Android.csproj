@@ -42,6 +42,7 @@
     <AndroidLinkMode>Full</AndroidLinkMode>
     <MandroidI18n>CJK;Mideast;Rare;West;Other</MandroidI18n>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidSupportedAbis />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
