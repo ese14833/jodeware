@@ -36,27 +36,7 @@
 
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" VerticalOptions="End">
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <Button Text="Ware hinzufügen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <Button Text="Waren bearbeiten" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="edit_colored.png" Clicked="colorededit"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <Button Text="Berichte" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="statistic_colored.png" Clicked="coloredbericht"/>
-                </StackLayout>
-
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <Button Text="Einstellungen" TextColor="Black" BackgroundColor="WhiteSmoke" BorderRadius="3" Image="settings_colored.png" Clicked="coloredsettings"/>
-                </StackLayout>
-
-            </StackLayout>
-  
+          
         </StackLayout>
 
     </ContentPage.Content>
