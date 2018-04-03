@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jodeware2.View.ProduktAendern">
+             x:Class="jodeware2.View.LagerbestandAendern">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Spacing="10" Margin="10">
 
-                <Label x:Name="l_bezeichnung" Text="Produktbezeichnung:" FontAttributes="Bold"/>
-                <Entry x:Name="e_bezeichnung" Text="{Binding pro_bezeichnung}" BackgroundColor="Transparent"/>
+                <Label x:Name="l_preis" Text="Preis:" FontAttributes="Bold"/>
+                <Entry x:Name="e_preis" Text="{Binding lag_preis}" BackgroundColor="Transparent"/>
 
-                <Label x:Name="l_beschreibung" Text="Beschreibung:" FontAttributes="Bold"/>
-                <Entry x:Name="e_beschreibung" Text="{Binding pro_beschreibung}" BackgroundColor="Transparent"/>
+                <Label x:Name="l_akt" Text="Aktuelle Menge:" FontAttributes="Bold"/>
+                <Entry x:Name="e_akt" Text="{Binding lag_akt_menge}" BackgroundColor="Transparent"/>
+
+                <Label x:Name="l_res" Text="Reservierte Menge:" FontAttributes="Bold"/>
+                <Entry x:Name="e_res" Text="{Binding lag_res_menge}" BackgroundColor="Transparent"/>
 
                 <Button x:Name="btn_update" Text="Speichern" Clicked="Speichern_Clicked" BackgroundColor="WhiteSmoke" BorderColor="Black" Image="minisave.png"/>
                 <Button x:Name="btn_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Home_Clicked" Image="home.png"/>

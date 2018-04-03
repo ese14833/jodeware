@@ -57,7 +57,7 @@ namespace jodeware2.View
         async void Update_Clicked(object sender, EventArgs e)
         {
             Lagerbestand lag = (Lagerbestand)lagerlist.SelectedItem;
-            //await Navigation.PushModalAsync(new LagerbestandAendern(lag));
+            await Navigation.PushModalAsync(new LagerbestandAendern(lag));
         }
 
         async void delete_Clicked(object sender, EventArgs e)
