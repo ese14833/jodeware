@@ -46,7 +46,7 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Weitere Lagerverwaltungen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="Lagerverwalten_Clicked"/>
+                        <Button Text="Lagerverwaltungen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="Lagerverwalten_Clicked"/>
                     </StackLayout>
 
                 </StackLayout>

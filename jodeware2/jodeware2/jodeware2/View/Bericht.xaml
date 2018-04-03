@@ -25,12 +25,22 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+            <StackLayout>
                 <Button Text="Letzte Woche" BorderColor="Black" BorderRadius="2" BackgroundColor="Orange" VerticalOptions="Center" Clicked="Woche_Clicked"/>
+            </StackLayout>
+            
+            <StackLayout>
                 <Button Text="Letzter Monat" BorderColor="Black" BorderRadius="2" BackgroundColor="OrangeRed" VerticalOptions="Center" Clicked="Monat_Clicked"/>
+            </StackLayout>
+            
+            <StackLayout>
                 <Button Text="Letztes Jahr" BorderColor="Black" BorderRadius="2" BackgroundColor="Red" VerticalOptions="Center" Clicked="Jahr_Clicked"/>
+            </StackLayout>
+            
+            <StackLayout>
                 <Button Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Menu_Clicked"/>
             </StackLayout>
+
 
 
         </StackLayout>
