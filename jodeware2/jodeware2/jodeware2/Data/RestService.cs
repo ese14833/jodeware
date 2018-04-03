@@ -77,7 +77,7 @@ namespace jodeware2.Data
         {
             Regals = new RootObjectReg();
 
-            var uri = new Uri(string.Format(Constants.KategorieRead, string.Empty));
+            var uri = new Uri(string.Format(Constants.RegalRead, string.Empty));
 
             try
             {
@@ -214,7 +214,7 @@ namespace jodeware2.Data
                 }
                 if (response.IsSuccessStatusCode)
                 {
-                    Debug.WriteLine(@"				Produkt successfully saved.");
+                    Debug.WriteLine(@"				Item successfully saved.");
                 }
             }
             catch (Exception ex)
@@ -258,7 +258,7 @@ namespace jodeware2.Data
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
-                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                    Debug.WriteLine(@"				Kategorie successfully deleted.");
                 }
             }
             catch (Exception ex)
@@ -280,7 +280,7 @@ namespace jodeware2.Data
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
-                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                    Debug.WriteLine(@"				Hersteller successfully deleted.");
                 }
             }
             catch (Exception ex)
@@ -302,7 +302,7 @@ namespace jodeware2.Data
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
-                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                    Debug.WriteLine(@"				Regal successfully deleted.");
                 }
             }
             catch (Exception ex)
@@ -324,7 +324,7 @@ namespace jodeware2.Data
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
-                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                    Debug.WriteLine(@"				Lagerbestand successfully deleted.");
                 }
             }
             catch (Exception ex)
@@ -344,7 +344,7 @@ namespace jodeware2.Data
                 var response = await client.PostAsync(uri, content);
                 if (response.IsSuccessStatusCode)
                 {
-                    Debug.WriteLine(@"				Produkt successfully deleted.");
+                    Debug.WriteLine(@"				Verkauf successfully deleted.");
                 }
             }
             catch (Exception ex)

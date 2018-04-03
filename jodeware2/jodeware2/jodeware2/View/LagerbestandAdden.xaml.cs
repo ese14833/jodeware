@@ -48,7 +48,7 @@ namespace jodeware2.View
                                   where r.reg_bezeichnung == regBez
                                   select r.reg_id).SingleOrDefault();
 
-            if (lager != null && lager.lag_preis != "0")
+            if (lager.produkt_pro_id != null && lager.regal_reg_id != null)
             {
                 await App.produktManager.SaveTaskAsync(lager, isNewLagerbestand);
                 await DisplayAlert("Erfolgreich", "Lagerbestand wurde geaddet.", "Okay");
@@ -100,7 +100,7 @@ namespace jodeware2.View
         {
             if (picker_reg != null && picker_reg.SelectedIndex <= picker_reg.Items.Count)
             {
-                proBez = picker_reg.Items[picker_reg.SelectedIndex];
+                regBez = picker_reg.Items[picker_reg.SelectedIndex];
             }
         }
     }
