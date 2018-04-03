@@ -45,7 +45,7 @@ namespace jodeware2.View
                                     where p.pro_bezeichnung == proBez
                                     select p.pro_id).SingleOrDefault();
             lager.regal_reg_id = (from r in regals
-                                  where r.reg_bezeichnung == proBez
+                                  where r.reg_bezeichnung == regBez
                                   select r.reg_id).SingleOrDefault();
 
             if (lager != null && lager.lag_preis != "0")
