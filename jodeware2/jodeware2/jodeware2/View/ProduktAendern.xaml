@@ -12,8 +12,8 @@
                 <Label x:Name="l_beschreibung" Text="Beschreibung:" FontAttributes="Bold"/>
                 <Entry x:Name="e_beschreibung" Text="{Binding pro_beschreibung}" BackgroundColor="Transparent"/>
 
-                <Button x:Name="btn_update" Text="Speichern" Clicked="Speichern_Clicked" BackgroundColor="WhiteSmoke" BorderColor="Black" Image="minisave.png"/>
-                <Button x:Name="btn_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Home_Clicked" Image="home.png"/>
+                <Button x:Name="btn_update" Text="Speichern" Clicked="Speichern_Clicked" BackgroundColor="WhiteSmoke" BorderColor="Black" BorderRadius="6" Image="minisave.png"/>
+                <Button x:Name="btn_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Home_Clicked" BorderRadius="6" Image="home.png"/>
 
             </StackLayout>
         </StackLayout>

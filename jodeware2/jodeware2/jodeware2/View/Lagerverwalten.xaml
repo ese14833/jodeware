@@ -8,11 +8,11 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                    <Button BorderRadius="3" Image="insert.png" Clicked="HerstellerAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="insert.png" Clicked="HerstellerAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Hersteller hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
+                        <Button Text="Hersteller hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -21,11 +21,11 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                    <Button BorderRadius="3" Image="insert.png" Clicked="KategorieAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="insert.png" Clicked="KategorieAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Kategorie hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieAdden_Clicked"/>
+                        <Button Text="Kategorie hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -34,11 +34,11 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="insert.png" Clicked="RegalAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="insert.png" Clicked="RegalAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Regal hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="RegalAdden_Clicked"/>
+                        <Button Text="Regal hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="RegalAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -47,11 +47,11 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                    <Button BorderRadius="3" Image="insert.png" Clicked="LagerbestandAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="insert.png" Clicked="LagerbestandAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Lagerbestand hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
+                        <Button Text="Lagerbestand hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -61,11 +61,11 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                    <Button BorderRadius="3" Image="insert.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="insert.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Verkauf hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="VerkaufAdden_Clicked"/>
+                        <Button Text="Verkauf hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="VerkaufAdden_Clicked"/>
                 </StackLayout>
                
             </StackLayout>
@@ -73,11 +73,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="edit_colored.png" Clicked="LagerbestandEdit_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="edit_colored.png" Clicked="LagerbestandEdit_Clicked" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Lagerbestand bearbeiten" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
+                        <Button Text="Lagerbestand bearbeiten" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -86,11 +86,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="liste.png" Clicked="KategorieShow_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="liste.png" Clicked="KategorieShow_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Kategorien anzeigen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieShow_Clicked"/>
+                        <Button Text="Kategorien anzeigen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="KategorieShow_Clicked"/>
                 </StackLayout>
                
             </StackLayout>    
@@ -99,11 +99,11 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="liste.png" Clicked="HerstellerShow_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="liste.png" Clicked="HerstellerShow_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                    <Button Text="Hersteller anzeigen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerShow_Clicked"/>
+                        <Button Text="Hersteller anzeigen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="HerstellerShow_Clicked"/>
                 </StackLayout>
                
             </StackLayout>    

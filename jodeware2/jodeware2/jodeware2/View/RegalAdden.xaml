@@ -12,9 +12,9 @@
                 <Label x:Name="l_regal_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
                 <Entry x:Name="e_regal_bezeichnung" Text="{Binding Path=reg_bezeichnung}" Placeholder="Name des Regals" BackgroundColor="WhiteSmoke"/>
 
-                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" Image="miniadden.png"/>
+                <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" BorderRadius="6" Image="miniadden.png"/>
 
-                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" Image="home.png"/>
+                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" BorderRadius="6" Image="home.png"/>
 
             </StackLayout>
         </StackLayout>

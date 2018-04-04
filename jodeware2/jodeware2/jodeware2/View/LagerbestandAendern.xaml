@@ -15,8 +15,8 @@
                 <Label x:Name="l_res" Text="Reservierte Menge:" FontAttributes="Bold"/>
                 <Entry x:Name="e_res" Text="{Binding lag_res_menge}" BackgroundColor="Transparent"/>
 
-                <Button x:Name="btn_update" Text="Speichern" Clicked="Speichern_Clicked" BackgroundColor="WhiteSmoke" BorderColor="Black" Image="minisave.png"/>
-                <Button x:Name="btn_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Home_Clicked" Image="home.png"/>
+                <Button x:Name="btn_update" Text="Speichern" Clicked="Speichern_Clicked" BackgroundColor="WhiteSmoke" BorderRadius="6" BorderColor="Black" Image="minisave.png"/>
+                <Button x:Name="btn_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" BorderRadius="6" Clicked="Home_Clicked" Image="home.png"/>
 
             </StackLayout>
         </StackLayout>

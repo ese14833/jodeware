@@ -27,7 +27,7 @@
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" Image="miniadden.png" />
 
 
-                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" Image="home.png"/>
+                <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" BorderRadius="6" Image="home.png"/>
 
             </StackLayout>
         </StackLayout>

@@ -25,7 +25,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="2" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked" Image="home.png"/>
+                <Button x:Name="home" Text="Startseite" BorderColor="Black" BorderRadius="6" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="home_Clicked" Image="home.png"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

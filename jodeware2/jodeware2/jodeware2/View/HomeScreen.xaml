@@ -17,11 +17,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="adden_colored.png" Clicked="coloredadden" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Ware hinzufügen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredadden"/>
+                        <Button Text="Ware hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredadden"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -30,11 +30,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="edit_colored.png" Clicked="colorededit" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="edit_colored.png" Clicked="colorededit" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Waren bearbeiten" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="colorededit"/>
+                        <Button Text="Waren bearbeiten" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="colorededit"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -42,11 +42,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="lagerverwaltung.png" Clicked="Lagerverwalten_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="lagerverwaltung.png" Clicked="Lagerverwalten_Clicked" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Lagerverwaltungen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="Lagerverwalten_Clicked"/>
+                        <Button Text="Lagerverwaltungen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="Lagerverwalten_Clicked"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -54,11 +54,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="statistic_colored.png" Clicked="coloredbericht" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="statistic_colored.png" Clicked="coloredbericht" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Berichte" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredbericht"/>
+                        <Button Text="Berichte" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredbericht"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -66,11 +66,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="settings_colored.png" Clicked="coloredsettings" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="settings_colored.png" Clicked="coloredsettings" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Einstellungen" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredsettings"/>
+                        <Button Text="Einstellungen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredsettings"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -78,11 +78,11 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="qrcode.png" Clicked="coloredqr" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="6" Image="qrcode.png" Clicked="coloredqr" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="QR - Code" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredqr"/>
+                        <Button Text="QR - Code" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredqr"/>
                     </StackLayout>
 
                 </StackLayout>
