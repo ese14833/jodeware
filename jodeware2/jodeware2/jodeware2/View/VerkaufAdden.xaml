@@ -13,7 +13,7 @@
                 <Picker x:Name="picker_pro" SelectedIndexChanged="picker_pro_SelectedIndexChanged"/>
 
                 <Label x:Name="l_ver_menge" Text="Menge:" Font="Calibri"/>
-                <Entry x:Name="e_ver_menge" Text="{Binding Path=ver_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="e_ver_menge" Text="{Binding Path=ver_menge}" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
 
                 <Label x:Name="l_ver_datum" Text="Datum:" Font="Calibri"/>
                 <!--<Entry x:Name="e_ver_datum" Text="{Binding Path=ver_datum}" Placeholder="Datum" BackgroundColor="WhiteSmoke"/>-->
@@ -21,7 +21,7 @@
 
 
                 <Label x:Name="l_ver_betrag" Text="Betrag:" Font="Calibri"/>
-                <Entry x:Name="e_ver_betrag" Text="{Binding Path=ver_betrag}" Placeholder="Betrag" BackgroundColor="WhiteSmoke"/>
+                <Entry x:Name="e_ver_betrag" Text="{Binding Path=ver_betrag}" Placeholder="Betrag" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
 
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderRadius="6" BorderColor="Black" Clicked="hinzufuegen" Image="miniadden.png"/>
 
