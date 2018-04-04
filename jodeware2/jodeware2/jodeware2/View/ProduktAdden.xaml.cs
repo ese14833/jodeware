@@ -52,7 +52,6 @@ namespace jodeware2.View
             {
                 await App.produktManager.SaveTaskAsync(produkt, isNewProdukt);
                 await DisplayAlert("Erfolgreich", "Produkt wurde geaddet.", "Okay");
-                await Navigation.PushModalAsync(new HomeScreen());
             }
             else
                 await DisplayAlert("Fehler!", "Produkt konnte nicht geaddet werden.", "Okay");

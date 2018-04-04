@@ -19,6 +19,7 @@ namespace jodeware2.View
 
         public List<string> proBezList;
         public List<Produkt> produkts;
+        public List<Lagerbestand> lagers;
 
         public string proBez;
 
@@ -33,8 +34,10 @@ namespace jodeware2.View
 
         async void hinzufuegen(Object sender, EventArgs e)
         {
+            Lagerbestand lager = new Lagerbestand();
             Verkauf verkauf = new Verkauf();
-            //verkauf.ver_id = e_ver_id.Text;
+            int akt, res, ver, checkMenge;
+
             verkauf.ver_menge = e_ver_menge.Text;
             verkauf.ver_datum = d_ver_datum.Date;
             verkauf.ver_betrag = e_ver_betrag.Text;
@@ -42,20 +45,52 @@ namespace jodeware2.View
                                       where p.pro_bezeichnung == proBez
                                       select p.pro_id).SingleOrDefault();
 
-            if (verkauf != null && verkauf.ver_menge != "0" && verkauf.ver_datum != null)
+            lager = (from lag in lagers
+                     where lag.produkt_pro_id == verkauf.produkt_pro_id
+                     select lag).FirstOrDefault<Lagerbestand>();
+
+            if (lager != null)
             {
-                await App.produktManager.SaveTaskAsync(verkauf, isnewVerkauf);
-                await DisplayAlert("Erfolgreich", "Verkauf wurde geaddet.", "Okay");
-                await Navigation.PushModalAsync(new HomeScreen());
+                akt = 0;
+                int.TryParse(lager.lag_akt_menge, out akt);
+
+                res = 0;
+                int.TryParse(lager.lag_res_menge, out res);
+
+                ver = 0;
+                int.TryParse(verkauf.ver_menge, out ver);
+
+                checkMenge = (akt - res) - ver;
+
+                if (checkMenge >= 0)
+                {
+
+                    if (verkauf != null && verkauf.ver_menge != "0" && verkauf.ver_datum != null)
+                    {
+                        await App.produktManager.SaveTaskAsync(verkauf, isnewVerkauf);
+                        await DisplayAlert("Erfolgreich", "Verkauf wurde geaddet.", "Okay");
+
+                        lager.lag_akt_menge = (akt - ver).ToString();
+                        await App.produktManager.SaveTaskAsync(lager, false);
+
+                        await Navigation.PushModalAsync(new Lagerverwalten());
+                    }
+                    else
+                        await DisplayAlert("Fehler!", "Verkauf konnte nicht geaddet werden.", "Okay");
+                }
+                else
+                    await DisplayAlert("Fehler!", "Es sind nicht genügend Stück dieses Produkts im Lager vorhanden!.", "Okay");
+
             }
             else
-                await DisplayAlert("Fehler!", "Verkauf konnte nicht geaddet werden.", "Okay");
+                await DisplayAlert("Fehler!", "Es sind nicht genügend Stück dieses Produkts im Lager vorhanden!.", "Okay");
         }
 
         public async void GetJson()
         {
             restService = new RestService();
             RootObject rootObject = new RootObject();
+            RootObjectLag objectLag = new RootObjectLag();
 
             try
             {
@@ -63,6 +98,9 @@ namespace jodeware2.View
                 produkts = rootObject.produkt;
                 proBezList = produkts.Select(p => p.pro_bezeichnung).ToList();
                 picker_pro.ItemsSource = proBezList;
+
+                objectLag = await restService.RefreshLagerbestandAsync();
+                lagers = objectLag.lagerbestand;
 
             }
             catch (Exception ex)
