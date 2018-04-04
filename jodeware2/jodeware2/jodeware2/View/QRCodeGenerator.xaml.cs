@@ -42,14 +42,14 @@ namespace jodeware2.View
             {
                 Text = "Besuche unsere Webseite",
                 Title = "JodeWare",
-                Url = "https://jodeware.com"
+                Url = "http://www.jodeware.com"
             });
         }
 
 
         private void Btn_visitsite(object sender, EventArgs e)
         {
-            CrossShare.Current.OpenBrowser("https://www.jodeware.com");
+            CrossShare.Current.OpenBrowser("http://www.jodeware.com");
         }
 
     }
