@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.VerkaufAdden">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
 
                 <!--<Label x:Name="l_ver_id" Text="ID:" Font="Calibri"/>
                 <Entry x:Name="e_ver_id" Text="{Binding Path=ver_id}" Placeholder="ID des Regals" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->

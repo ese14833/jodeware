@@ -19,10 +19,10 @@
                         <ViewCell>
                             <StackLayout Margin="20,20,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Bezeichnung}" BackgroundColor="Transparent" FontSize="19" FontFamily="Calibri"/>
-                                    <Label Text="{Binding VerkaufteMenge, StringFormat='{}{0:C} Stück'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                    <Label Text="{Binding Umsatz, StringFormat='{}{0:C}€'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                    <Label Text="{Binding GesamtUmsatz, StringFormat='{}{0:C}€'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                    <Label Text="{Binding Bezeichnung}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                    <Label Text="{Binding VerkaufteMenge, StringFormat='{}{0:C} Stück'}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                    <Label Text="{Binding Umsatz, StringFormat='{}{0:C}€'}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                    <Label Text="{Binding GesamtUmsatz, StringFormat='{}{0:C}€'}" BackgroundColor="Transparent" FontFamily="Arial"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

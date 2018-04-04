@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.KategorieAdden">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
 
                 <Label x:Name="l_kat_id" Text="ID:" Font="Calibri"/>
                 <Entry x:Name="e_kat_id" Text="{Binding Path=kat_id}" Placeholder="ID der Kategorie" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>

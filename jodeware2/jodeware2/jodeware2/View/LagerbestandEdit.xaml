@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.LagerbestandEdit">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
                 <SearchBar x:Name="suche" Placeholder="Suche nach Lagerbeständen" TextChanged="SearchBar_OnTextChanged"/>
                 <ListView x:Name="lagerlist" RowHeight="40" SeparatorVisibility="Default">
                     <ListView.ItemTemplate>

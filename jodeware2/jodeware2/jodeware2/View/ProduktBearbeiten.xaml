@@ -5,7 +5,7 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
                 <SearchBar x:Name="suche" Placeholder="Suche nach Produkten" TextChanged="SearchBar_OnTextChanged"/>
                 <ListView x:Name="produktlist" RowHeight="40" SeparatorVisibility="Default">
                     <ListView.ItemTemplate>
@@ -13,11 +13,11 @@
                             <ViewCell>
                                 <StackLayout Margin="20,20,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
                                     <StackLayout Orientation="Horizontal">
-                                        <Label x:Name="l_id" Text="{Binding pro_id}" BackgroundColor="Transparent" FontSize="19" FontFamily="Calibri"/>
-                                        <Label x:Name="l_bez" Text="{Binding pro_bezeichnung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                        <Label x:Name="l_besch" Text="{Binding pro_beschreibung}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                        <Label x:Name="l_her" Text="{Binding hersteller_her_id, StringFormat=', Hersteller ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
-                                        <Label x:Name="l_kat" Text="{Binding kategorie_kat_id, StringFormat=', Kategorie ID: {0:N}'}" BackgroundColor="Transparent" FontSize="18" FontFamily="Calibri"/>
+                                        <Label x:Name="l_id" Text="{Binding pro_id}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                        <Label x:Name="l_bez" Text="{Binding pro_bezeichnung}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                        <Label x:Name="l_besch" Text="{Binding pro_beschreibung}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                        <Label x:Name="l_her" Text="{Binding hersteller_her_id, StringFormat=', Hersteller ID: {0:N}'}" BackgroundColor="Transparent" FontFamily="Arial"/>
+                                        <Label x:Name="l_kat" Text="{Binding kategorie_kat_id, StringFormat=', Kategorie ID: {0:N}'}" BackgroundColor="Transparent" FontFamily="Arial"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>

@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
 
                 <!--<Label x:Name="l_id" Text="ID:" Font="Calibri"/>
                 <Entry x:Name="e_id" Text="{Binding Path=pro_id}" Placeholder="ID" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->

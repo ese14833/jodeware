@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.HerstellerAdden">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
 
                 <Label x:Name="l_her_id" Text="ID:" Font="Calibri"/>
                 <Entry x:Name="e_her_id" Text="{Binding Path=her_id}" Placeholder="ID des Herstellers" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>

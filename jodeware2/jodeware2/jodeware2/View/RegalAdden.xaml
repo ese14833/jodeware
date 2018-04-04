@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.RegalAdden">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
 
                 <Label x:Name="l_regal_id" Text="ID:" Font="Calibri"/>
                 <Entry x:Name="e_regal_id" Text="{Binding Path=reg_id}" Placeholder="ID des Regals" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>

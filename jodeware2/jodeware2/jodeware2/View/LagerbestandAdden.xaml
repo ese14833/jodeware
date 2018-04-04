@@ -4,7 +4,7 @@
              x:Class="jodeware2.View.LagerbestandAdden">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Margin="20" Padding="10">
+            <StackLayout Margin="10" Padding="20">
 
                 <!--<Label x:Name="l_lager_id" Text="ID:" Font="Calibri"/>
                 <Entry x:Name="e_lager_id" Text="{Binding Path=lag_id}" Placeholder="ID des Lagerbestands" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
