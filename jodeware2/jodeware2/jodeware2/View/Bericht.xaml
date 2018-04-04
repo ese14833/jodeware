@@ -6,7 +6,7 @@
              Title="Berichte">
 
     <ContentPage.Content>
-        <StackLayout Padding="20" Margin="10">
+        <StackLayout Padding="5" Margin="10">
 
             <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default">
                 <ListView.Header>

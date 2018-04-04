@@ -5,7 +5,7 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <StackLayout Margin="10" Padding="20">
+            <StackLayout Margin="10" Padding="5">
                 <SearchBar x:Name="suche" Placeholder="Suche nach Produkten" TextChanged="SearchBar_OnTextChanged"/>
                 <ListView x:Name="produktlist" RowHeight="40" SeparatorVisibility="Default">
                     <ListView.ItemTemplate>
