@@ -57,17 +57,6 @@
 
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="6" Image="settings_colored.png" Clicked="coloredsettings" BackgroundColor="WhiteSmoke"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Einstellungen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="coloredsettings"/>
-                    </StackLayout>
-
-                </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 

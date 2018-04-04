@@ -51,7 +51,7 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Lagerbestand hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
+                        <Button Text="Lagerbestand &#xa; hinzufügen" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandAdden_Clicked"/>
                 </StackLayout>
 
             </StackLayout>
@@ -77,7 +77,7 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Lagerbestand bearbeiten" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
+                        <Button Text="Lagerbestand &#xa; bearbeiten" BorderRadius="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
                     </StackLayout>
 
                 </StackLayout>

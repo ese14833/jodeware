@@ -40,11 +40,8 @@ namespace jodeware2.View
             var imageSenderStatistic = new Image { Source = "statistic_colored.png" };
             imageSenderStatistic.IsVisible = true;
 
-            var imageSenderSettings = new Image { Source = "settings_colored.png" };
-            imageSenderSettings.IsVisible = true;
-
             var imageSenderQR = new Image { Source = "qrcode.png" };
-            imageSenderSettings.IsVisible = true;
+            imageSenderQR.IsVisible = true;
 
             ScrollView scroll = new ScrollView();
         }
@@ -76,12 +73,6 @@ namespace jodeware2.View
         async void colorededit(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new ProduktBearbeiten());
-        }
-
-        async void coloredsettings(object sender, EventArgs e)
-        {
-
-            await Navigation.PushModalAsync(new Einstellungen());
         }
 
         async void coloredqr(object sender, EventArgs e)
