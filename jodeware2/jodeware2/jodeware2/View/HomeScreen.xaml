@@ -54,7 +54,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="statistic_colored.png" Clicked="colorededit" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="3" Image="statistic_colored.png" Clicked="coloredbericht" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
@@ -78,7 +78,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="qrcode.png" Clicked="colorededit" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="3" Image="qrcode.png" Clicked="coloredqr" BackgroundColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
