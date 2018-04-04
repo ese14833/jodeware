@@ -42,8 +42,8 @@ namespace jodeware2.View
             var request = new RestRequest(Method.POST);
 
             request.AddParameter("grant_type", "password");
-            request.AddParameter("username", "johannesjanka@aol.com");
-            request.AddParameter("password", "Jodeware123");
+            request.AddParameter("username", username);
+            request.AddParameter("password", password);
             request.AddParameter("client_id", "2qK8aSMyOtzidVPXJHSMf1Aj5Ml-V9zB");
             request.AddParameter("client_secret", "QNYxADHBbfi91QBQs3hc6DzEJ0-n4XzJ63eGqA--GZVapyhWPBMEjD1zhil_RMsP");
             request.AddParameter("scope", "openid");

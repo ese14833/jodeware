@@ -25,7 +25,6 @@ namespace jodeware2.View
         {
             restService = new RestService();
             RootObjectKat objectKat = new RootObjectKat();
-            //ListView kategorieList = new ListView();
             kategorieList.RowHeight = 60;
             objectKat = await restService.RefreshKategorieAsync();
             kategorieList.ItemsSource = objectKat.kategorie;
