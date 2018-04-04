@@ -150,6 +150,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)lagerverwaltung.png" />
+    <Content Include="$(MSBuildThisFileDirectory)liste.png" />
     <Content Include="$(MSBuildThisFileDirectory)miniadden.png" />
     <Content Include="$(MSBuildThisFileDirectory)minidelete.png" />
     <Content Include="$(MSBuildThisFileDirectory)minisave.png" />

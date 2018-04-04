@@ -57,19 +57,7 @@
             </StackLayout>
                 
                 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                    <Button BorderRadius="3" Image="edit_colored.png" Clicked="LagerbestandEdit_Clicked" BackgroundColor="WhiteSmoke"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Button Text="Lagerbestand bearbeiten" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
-                </StackLayout>
-
-            </StackLayout>
-
-
+           
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
@@ -81,12 +69,24 @@
                 </StackLayout>
                
             </StackLayout>
-                
-                
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                        <Button BorderRadius="3" Image="edit_colored.png" Clicked="LagerbestandEdit_Clicked" BackgroundColor="WhiteSmoke"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <Button Text="Lagerbestand bearbeiten" TextColor="Black" FontSize="Medium" FontAttributes="Bold" BackgroundColor="WhiteSmoke" Clicked="LagerbestandEdit_Clicked"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                    <Button BorderRadius="3" Image="edit_colored.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                    <Button BorderRadius="3" Image="liste.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
@@ -99,7 +99,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
-                        <Button BorderRadius="3" Image="edit_colored.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
+                        <Button BorderRadius="3" Image="liste.png" Clicked="VerkaufAdden_Clicked" BackgroundColor="WhiteSmoke"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">

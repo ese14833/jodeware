@@ -152,6 +152,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\settings_colored.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\liste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\launchericon.png" />
+  </ItemGroup>
   <Import Project="..\jodeware2\jodeware2.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
