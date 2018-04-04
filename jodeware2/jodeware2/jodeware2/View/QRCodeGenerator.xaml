@@ -9,7 +9,7 @@
             <!-- BarcodeValue muss mit den Usernamen(=user) verbunden werden. Bsp.: www.jodeware.com/+user -->
 
             <zxing:ZXingBarcodeImageView BarcodeFormat="QR_CODE"
-                                         BarcodeValue="www.spengergasse.at" />
+                                         BarcodeValue="http:\\www.jodeware.com" />
 
             <!-- Zusätzlich wird noch die Druck-Funktion und lokal speichern-Funktion kommen  -->
 
