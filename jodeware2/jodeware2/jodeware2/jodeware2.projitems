@@ -19,9 +19,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\IRestService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\ProduktManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\RestService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\Hersteller.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\HerstellerDB.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocalDB\ILocalFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -40,7 +37,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectLag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectReg.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Verkauf.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProduktViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)View\HerstellerAdden.xaml.cs">
       <DependentUpon>HerstellerAdden.xaml</DependentUpon>
       <SubType>Code</SubType>

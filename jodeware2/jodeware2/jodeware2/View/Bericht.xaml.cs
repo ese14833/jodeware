@@ -1,6 +1,5 @@
 ﻿using jodeware2.Data;
 using jodeware2.Models;
-using jodeware2.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
