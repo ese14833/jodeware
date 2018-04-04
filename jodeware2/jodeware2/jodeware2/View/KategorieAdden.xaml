@@ -13,7 +13,6 @@
                 <Entry x:Name="e_kat_bezeichnung" Text="{Binding Path=kat_bezeichnung}" Placeholder="Name der Kategorie" BackgroundColor="WhiteSmoke"/>
 
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" BorderRadius="6" Image="miniadden.png"/>
-
                 <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" BorderRadius="6" Image="home.png"/>
 
             </StackLayout>

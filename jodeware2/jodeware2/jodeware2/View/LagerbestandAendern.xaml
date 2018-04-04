@@ -7,13 +7,13 @@
             <StackLayout Spacing="10" Margin="10">
 
                 <Label x:Name="l_preis" Text="Preis:" FontAttributes="Bold"/>
-                <Entry x:Name="e_preis" Text="{Binding lag_preis}" BackgroundColor="Transparent"/>
+                <Entry x:Name="e_preis" Text="{Binding lag_preis}" BackgroundColor="Transparent" Keyboard="Numeric"/>
 
                 <Label x:Name="l_akt" Text="Aktuelle Menge:" FontAttributes="Bold"/>
-                <Entry x:Name="e_akt" Text="{Binding lag_akt_menge}" BackgroundColor="Transparent"/>
+                <Entry x:Name="e_akt" Text="{Binding lag_akt_menge}" BackgroundColor="Transparent" Keyboard="Numeric"/>
 
                 <Label x:Name="l_res" Text="Reservierte Menge:" FontAttributes="Bold"/>
-                <Entry x:Name="e_res" Text="{Binding lag_res_menge}" BackgroundColor="Transparent"/>
+                <Entry x:Name="e_res" Text="{Binding lag_res_menge}" BackgroundColor="Transparent" Keyboard="Numeric"/>
 
                 <Button x:Name="btn_update" Text="Speichern" Clicked="Speichern_Clicked" BackgroundColor="WhiteSmoke" BorderRadius="6" BorderColor="Black" Image="minisave.png"/>
                 <Button x:Name="btn_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" BorderRadius="6" Clicked="Home_Clicked" Image="home.png"/>

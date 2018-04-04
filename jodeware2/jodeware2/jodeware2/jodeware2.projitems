@@ -40,9 +40,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectLag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RootObjectReg.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Verkauf.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktRepository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktRepository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ProduktService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProduktViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)View\HerstellerAdden.xaml.cs">
       <DependentUpon>HerstellerAdden.xaml</DependentUpon>
@@ -164,9 +161,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IProduktService.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Einstellungen.xaml">

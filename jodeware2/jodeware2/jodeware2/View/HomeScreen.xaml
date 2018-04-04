@@ -3,17 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jodeware2.View.HomeScreen" Title="Startseite - JodeWare">
     <ContentPage.Content>
-  
         <ScrollView x:Name="scroll" Orientation="Vertical">
-
-
             <StackLayout x:Name="homescreenlayout">
-
 
                 <Image x:Name="logo" Source = "jodewarelogo.png"/>
 
-
-              
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10">
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="Fill">

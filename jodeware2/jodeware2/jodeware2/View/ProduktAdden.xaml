@@ -4,19 +4,13 @@
              x:Class="jodeware2.View.ProduktAdden" Title="Ware hinzufügen - JodeWare">
     <ContentPage.Content>
         <StackLayout>
-
             <StackLayout Margin="10" Padding="20">
-
-                <!--<Label x:Name="l_id" Text="ID:" Font="Calibri"/>
-                <Entry x:Name="e_id" Text="{Binding Path=pro_id}" Placeholder="ID" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
 
                 <Label x:Name="l_hersteller" Text="Hersteller:" Font="Calibri"/>
                 <Picker x:Name="picker_her" SelectedIndexChanged="picker_her_SelectedIndexChanged"/>
-                <!--<Entry x:Name="e_hersteller" Text="{Binding Path=hersteller_her_id}" Placeholder="Hersteller" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
 
                 <Label x:Name="l_kategorie" Text="Kategorie:" Font="Calibri"/>
                 <Picker x:Name="picker_kat" SelectedIndexChanged="picker_kat_SelectedIndexChanged"/>
-                <!--<Entry x:Name="e_kategorie" Text="{Binding Path=kategorie_kat_id}" Placeholder="Kategorie" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>-->
 
                 <Label x:Name="l_bezeichnung" Text="Bezeichnung:" Font="Calibri"/>
                 <Entry x:Name="e_bezeichnung" Text="{Binding Path=pro_bezeichnung}" Placeholder="Bezeichnung des Produkts" BackgroundColor="WhiteSmoke"/>
@@ -24,20 +18,10 @@
                 <Label x:Name="l_beschreibung" Text="Beschreibung:" Font="Calibri"/>
                 <Entry x:Name="e_beschreibung" Text="{Binding Path=pro_beschreibung}" Placeholder="Beschreibung des Produkts" BackgroundColor="WhiteSmoke"/>
 
-                <!--<Label x:Name="l_menge" Text="Menge" Font="Calibri"/>
-                <Entry x:Name="e_menge" Text="{Binding Path=pro_id}" Placeholder="Menge" BackgroundColor="WhiteSmoke" Keyboard="Numeric"/>
-                
-                <Label x:Name="l_location" Text="Standort" Font="Calibri"/>
-                <Entry x:Name="e_location" Text="{Binding Path=pro_beschreibung}" Placeholder="Standort" BackgroundColor="WhiteSmoke"/>-->
-
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" BorderRadius="6" Image="miniadden.png"/>
-
                 <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" BorderRadius="6" Image="home.png"/>
 
             </StackLayout>
-
-          
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

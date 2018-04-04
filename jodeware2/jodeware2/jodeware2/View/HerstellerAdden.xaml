@@ -13,8 +13,6 @@
                 <Entry x:Name="e_her_bezeichnung" Text="{Binding Path=her_bezeichnung}" Placeholder="Name des Herstellers" BackgroundColor="WhiteSmoke"/>
 
                 <Button x:Name="b_hinzufuegen" Text="Hinzufügen" BackgroundColor="WhiteSmoke" BorderColor="Black" Clicked="hinzufuegen" BorderRadius="6" Image="miniadden.png"/>
-
-
                 <Button x:Name="b_home" Text="Startseite" BackgroundColor="DarkGray" BorderColor="Black" Clicked="Btn_home" BorderRadius="6" Image="home.png"/>
 
             </StackLayout>

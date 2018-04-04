@@ -7,7 +7,6 @@
 
     <ContentPage.Content>
         <StackLayout Padding="5" Margin="10">
-
             <ListView x:Name="lstView" RowHeight="40" SeparatorVisibility="Default">
                 <ListView.Header>
                     <StackLayout Padding="10,5,0,5" BackgroundColor="#cccccc">
@@ -41,13 +40,10 @@
             <StackLayout>
                 <Button Text="Letztes Jahr" BorderColor="Black" BorderRadius="6" BackgroundColor="Red" VerticalOptions="Center" Clicked="Jahr_Clicked"/>
             </StackLayout>
-            
+
             <StackLayout>
                 <Button Text="Startseite" BorderColor="Black" BorderRadius="6" BackgroundColor="WhiteSmoke" VerticalOptions="Center" Clicked="Menu_Clicked"/>
             </StackLayout>
-
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
