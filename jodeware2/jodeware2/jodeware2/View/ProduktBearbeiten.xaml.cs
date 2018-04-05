@@ -104,17 +104,25 @@ namespace jodeware2.View
         async void Update_Clicked(object sender, EventArgs e)
         {
             Produkt pro = (Produkt)produktlist.SelectedItem;
-            await Navigation.PushModalAsync(new ProduktAendern(pro));
+            if (pro != null)
+                await Navigation.PushModalAsync(new ProduktAendern(pro));
+            else
+                await DisplayAlert("Fehler!", "Kein Produkt ausgewählt!.", "Okay");
         }
 
         async void delete_Clicked(object sender, EventArgs e)
         {
             Produkt pro = (Produkt)produktlist.SelectedItem;
-            Produkt produkt = (from prod in produkts
-                               where prod.pro_id == pro.pro_id
-                               select prod).FirstOrDefault<Produkt>();
-            await App.produktManager.DeleteTaskAsync(produkt);
-            await Navigation.PushModalAsync(new ProduktBearbeiten());
+            if (pro != null)
+            {
+                Produkt produkt = (from prod in produkts
+                                   where prod.pro_id == pro.pro_id
+                                   select prod).FirstOrDefault<Produkt>();
+                await App.produktManager.DeleteTaskAsync(produkt);
+                await Navigation.PushModalAsync(new ProduktBearbeiten());
+            }
+            else
+                await DisplayAlert("Fehler!", "Kein Produkt ausgewählt!.", "Okay");
         }
 
     }

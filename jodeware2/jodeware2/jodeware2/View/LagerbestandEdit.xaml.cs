@@ -57,17 +57,25 @@ namespace jodeware2.View
         async void Update_Clicked(object sender, EventArgs e)
         {
             Lagerbestand lag = (Lagerbestand)lagerlist.SelectedItem;
-            await Navigation.PushModalAsync(new LagerbestandAendern(lag));
+            if (lag != null)
+                await Navigation.PushModalAsync(new LagerbestandAendern(lag));
+            else
+                await DisplayAlert("Fehler!", "Kein Lagerbestand ausgewählt!.", "Okay");
         }
 
         async void delete_Clicked(object sender, EventArgs e)
         {
             Lagerbestand lag = (Lagerbestand)lagerlist.SelectedItem;
-            Lagerbestand lager = (from l in lagers
-                               where l.lag_id == lag.lag_id
-                               select l).FirstOrDefault<Lagerbestand>();
-            await App.produktManager.DeleteTaskAsync(lager);
-            await Navigation.PushModalAsync(new LagerbestandEdit());
+            if (lag != null)
+            {
+                Lagerbestand lager = (from l in lagers
+                                      where l.lag_id == lag.lag_id
+                                      select l).FirstOrDefault<Lagerbestand>();
+                await App.produktManager.DeleteTaskAsync(lager);
+                await Navigation.PushModalAsync(new LagerbestandEdit());
+            }
+            else
+                await DisplayAlert("Fehler!", "Kein Lagerbestand ausgewählt!.", "Okay");
         }
 
 
